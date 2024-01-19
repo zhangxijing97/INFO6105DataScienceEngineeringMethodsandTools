@@ -69,4 +69,4 @@
 ## 8. Clustering Methods
 ## 9. Association Rules
 ## 10. Introduction to Neural Networks / Deep Learning
-## 11. Introduction to Big data Analysis
+## 11. Introduction to Big-data Analysis
