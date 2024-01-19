@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-1. [Introduction to Data Science](#Introduction-to-Data-Science)
+1. [Introduction to Data Science](#1-Introduction-to-Data-Science)
 - [Train / Test/ Validation](#Train-Test-Validation)
 
 2. [Data Preprocessing](#Data-Preprocessing)
