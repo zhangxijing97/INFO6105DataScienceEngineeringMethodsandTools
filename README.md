@@ -26,7 +26,7 @@
 11. [Introduction to Big-data Analysis](#11-Introduction-to-Big-data-Analysis)
 
 ## 1. Introduction to Data Science
-### Train / Test/ Validation
+### Train, Test, Validation
 Sample proportion of non-relapse when treated with lithium: 6/24<br>
 Sample proportion of non-relapse when treated with placebo: 4/24<br>
 
