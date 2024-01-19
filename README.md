@@ -26,39 +26,9 @@
 11. [Introduction to Big-data Analysis](#11-Introduction-to-Big-data-Analysis)
 
 ## 1. Introduction to Data Science
-• Introduction to Data Science
-• Data Preprocessing
-• Linear Classifiers
-• Non-Linear Classifiers
-• Decision Trees
-• Ensembles and Super learners
-• Dimensionality Reduction
-• Clustering Methods
-• Association Rules
-• Introduction to Neural Networks / Deep Learning
-• Introduction to Big-data Analysis
-• Introduction to Data Science
-• Data Preprocessing
-• Linear Classifiers
-• Non-Linear Classifiers
-• Decision Trees
-• Ensembles and Super learners
-• Dimensionality Reduction
-• Clustering Methods
-• Association Rules
-• Introduction to Neural Networks / Deep Learning
-• Introduction to Big-data Analysis
-• Introduction to Data Science
-• Data Preprocessing
-• Linear Classifiers
-• Non-Linear Classifiers
-• Decision Trees
-• Ensembles and Super learners
-• Dimensionality Reduction
-• Clustering Methods
-• Association Rules
-• Introduction to Neural Networks / Deep Learning
-• Introduction to Big-data Analysis
+### Train / Test/ Validation
+Sample proportion of non-relapse when treated with lithium: 6/24<br>
+Sample proportion of non-relapse when treated with placebo: 4/24<br>
 
 ## 2. Data Preprocessing
 ## 3. Linear Classifiers
