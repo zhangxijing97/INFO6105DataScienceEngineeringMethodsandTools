@@ -87,16 +87,16 @@ Confidence({Milk, Bread}⇒{Eggs}) = Number of transactions containing Milk, Bre
 
 **Lift:** Lift measures the strength of association between an antecedent and consequent, taking into account the support of both itemsets. A lift greater than 1 indicates that the presence of the antecedent increases the likelihood of the consequent.<br>
 Lift = Support/[Support(X)*Support(Y)]<br>
-Support(X, Y): This is the support of the itemset containing both X and Y
-Support(X): This is the support of the antecedent X
-Support(Y): This is the support of the consequent Y
+Support(X, Y): This is the support of the itemset containing both X and Y<br>
+Support(X): This is the support of the antecedent X<br>
+Support(Y): This is the support of the consequent Y<br>
 
-The lift formula essentially compares the observed co-occurrence of X and Y (Support(X, Y)) to what would be expected if X and Y were independent events (Support(X) * Support(Y))
-Lift = 1: X and Y are independent.
-Lift > 1: There is a positive association between X and Y (X and Y are more likely to occur together than expected).
-Lift < 1: There is a negative association between X and Y (X and Y are less likely to occur together than expected).
+The lift formula essentially compares the observed co-occurrence of X and Y (Support(X, Y)) to what would be expected if X and Y were independent events (Support(X) * Support(Y))<br>
+Lift = 1: X and Y are independent.<br>
+Lift > 1: There is a positive association between X and Y (X and Y are more likely to occur together than expected).<br>
+Lift < 1: There is a negative association between X and Y (X and Y are less likely to occur together than expected).<br>
 
-Lift({Milk, Bread}⇒{Eggs})= Support({Milk, Bread, Eggs})/Support({Milk, Bread})×Support({Eggs})
+Lift({Milk, Bread}⇒{Eggs})= Support({Milk, Bread, Eggs})/Support({Milk, Bread})×Support({Eggs})<br>
 
 ## 2. Data Preprocessing
 ## 3. Linear Classifiers
