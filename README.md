@@ -64,6 +64,13 @@ Test: 10%-25%<br>
 **Association rule:** Association rule mining is a rule- based machine learning method for discovering interesting relations between variables in transactional databases.<br>
 Example: basket analysis, where the goal is to uncover associations between items frequently purchased together.<br>
 
+Rule: X => Y<br>
+X: antecedent (or left-hand side) items that when observed<br>
+Y: consequent (or right-hand side) items that are expected or likely to be present when the conditions in the antecedent are mets<br>
+
+A, B => C: it suggests that when both items A and B are present (antecedent), there is a likelihood that item C will also be present (consequent).<br>
+{Milk, Bread} => {Eggs}: customers who buy both milk and bread are likely to buy eggs as well.<br>
+
 **Support:** Support measures the frequency of occurrence of a particular combination of items in a dataset. It is the proportion of transactions that contain the set of items being considered. High support values indicate that the itemset is common in the dataset.<br>
 Support = frq(X,Y)/N<br>
 
