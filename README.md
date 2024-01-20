@@ -3,6 +3,10 @@
 ## Table of Contents
 
 1. [Introduction to Data Science](#1-Introduction-to-Data-Science)
+- [Some Supervised Approaches](#Some-Supervised-Approaches)
+- [Training Model](#Training-Model)
+- [Train / Test/ Validation](#Train-Test-Validation)
+- [Train / Test/ Validation](#Train-Test-Validation)
 - [Train / Test/ Validation](#Train-Test-Validation)
 
 2. [Data Preprocessing](#2-Data-Preprocessing)
