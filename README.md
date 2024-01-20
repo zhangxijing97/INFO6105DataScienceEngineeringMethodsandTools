@@ -73,6 +73,9 @@ A, B => C: it suggests that when both items A and B are present (antecedent), th
 
 **Support:** Support measures the frequency of occurrence of a particular combination of items in a dataset. It is the proportion of transactions that contain the set of items being considered. High support values indicate that the itemset is common in the dataset.<br>
 Support = frq(X,Y)/N<br>
+frq(X, Y): This is the count of transactions where the itemset (X, Y) is present.<br>
+N: This represents the total number of transactions or instances in the dataset.<br>
+Support({Milk,Bread})= Number of transactions containing both Milk and Bread/Total number of transactions in the dataset<br>
 
 **Confidence:** Confidence measures the likelihood that an associated rule holds true. It is the conditional probability of finding the consequent (item B) given the antecedent (item A). High confidence indicates a strong association between the antecedent and consequent.<br>
 Confidence = frq(X,Y)/frq(X)<br>
