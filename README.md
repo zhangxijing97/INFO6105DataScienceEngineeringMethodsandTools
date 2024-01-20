@@ -37,8 +37,8 @@ SVM(Support Vector Machines): Support Vector Machine (SVM) models have the abili
 Ensembles: Ensemble methods are machine learning techniques that combines several models in order to produce optimal models<br>
 
 ### Training Model
-• Our training data comes in pairs of inputs (x,y)<br>
-• D={(x1,y1),...,(xn,yn)}<br>
+Our training data comes in pairs of inputs (x,y)<br>
+D={(x1,y1),...,(xn,yn)}<br>
 
 xi: input vector of the ith sample (feature vector)<br>
 yi: label of the ith sample Training dataset<br>
@@ -63,6 +63,8 @@ Test: 10%-25%<br>
 **Clustering:** Learn the grouping structure for a given set of unlabeled inputs<br>
 **Association rule:** Association rule mining is a rule- based machine learning method for discovering interesting relations between variables in transactional databases.<br>
 Example: basket analysis, where the goal is to uncover associations between items frequently purchased together.<br>
+
+***Association rule:***
 
 
 ## 2. Data Preprocessing
