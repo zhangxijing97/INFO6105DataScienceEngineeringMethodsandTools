@@ -86,7 +86,7 @@ Confidence({Milk, Bread}⇒{Eggs}) = Number of transactions containing Milk, Bre
 **Apriori Algorithm:** The Apriori algorithm is a widely used algorithm for mining association rules. It works by iteratively discovering frequent itemsets (sets of items that occur together frequently) and generating association rules based on these itemsets.<br>
 
 **Lift:** Lift measures the strength of association between an antecedent and consequent, taking into account the support of both itemsets. A lift greater than 1 indicates that the presence of the antecedent increases the likelihood of the consequent.<br>
-Lift = Support/[Support(X)*Support(Y)]<br>
+Lift = Support(X,Y)/[Support(X)*Support(Y)]<br>
 Support(X, Y): This is the support of the itemset containing both X and Y<br>
 Support(X): This is the support of the antecedent X<br>
 Support(Y): This is the support of the consequent Y<br>
