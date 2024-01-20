@@ -45,8 +45,11 @@ The goal of supervised learning is to develop a model h:<br>
 h(xi)≈yi for all (xi,yi)∈D<br>
 
 ### Train, Test, Validation
-Sample proportion of non-relapse when treated with lithium: 6/24<br>
-Sample proportion of non-relapse when treated with placebo: 4/24<br>
+**Training Set:** The model learns patterns and relationships within the training set. It is the data on which the model is trained to make predictions.<br>
+
+**Testing Set:** Once the model is trained, it is evaluated on the testing set to assess its performance and generalization to new, unseen data. This set helps to estimate how well the model is likely to perform on new, real-world data.<br>
+
+**Validation Set:** The validation set is another independent subset used during the training phase to fine-tune the model and avoid overfitting.<br>
 
 ## 2. Data Preprocessing
 ## 3. Linear Classifiers
