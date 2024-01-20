@@ -71,7 +71,7 @@ Y: consequent (or right-hand side) items that are expected or likely to be prese
 A, B => C: it suggests that when both items A and B are present (antecedent), there is a likelihood that item C will also be present (consequent).<br>
 {Milk, Bread} => {Eggs}: customers who buy both milk and bread are likely to buy eggs as well.<br>
 
-**Support:** Support measures the frequency of occurrence of a particular combination of items in a dataset. It is the proportion of transactions that contain the set of items being considered. High support values indicate that the itemset is common in the dataset.<br>
+**Support:** Support measures the frequency of occurrence of a particular combination of items in a dataset. High support values indicate that the itemset is common in the dataset.<br>
 Support = frq(X,Y)/N<br>
 frq(X, Y): This is the count of transactions where the itemset (X, Y) is present.<br>
 N: This represents the total number of transactions or instances in the dataset.<br>
@@ -79,11 +79,24 @@ Support({Milk,Bread})= Number of transactions containing both Milk and Bread/Tot
 
 **Confidence:** Confidence measures the likelihood that an associated rule holds true. It is the conditional probability of finding the consequent (item B) given the antecedent (item A). High confidence indicates a strong association between the antecedent and consequent.<br>
 Confidence = frq(X,Y)/frq(X)<br>
+frq(X, Y): This is the count of transactions where both the antecedent (X) and the consequent (Y) are present.<br>
+frq(X): This is the count of transactions where the antecedent (X) is present.<br>
+Confidence({Milk, Bread}⇒{Eggs}) = Number of transactions containing Milk, Bread, and Eggs/Number of transactions containing Milk and Bread<br>
 
 **Apriori Algorithm:** The Apriori algorithm is a widely used algorithm for mining association rules. It works by iteratively discovering frequent itemsets (sets of items that occur together frequently) and generating association rules based on these itemsets.<br>
 
 **Lift:** Lift measures the strength of association between an antecedent and consequent, taking into account the support of both itemsets. A lift greater than 1 indicates that the presence of the antecedent increases the likelihood of the consequent.<br>
 Lift = Support/[Support(X)*Support(Y)]<br>
+Support(X, Y): This is the support of the itemset containing both X and Y
+Support(X): This is the support of the antecedent X
+Support(Y): This is the support of the consequent Y
+
+The lift formula essentially compares the observed co-occurrence of X and Y (Support(X, Y)) to what would be expected if X and Y were independent events (Support(X) * Support(Y))
+Lift = 1: X and Y are independent.
+Lift > 1: There is a positive association between X and Y (X and Y are more likely to occur together than expected).
+Lift < 1: There is a negative association between X and Y (X and Y are less likely to occur together than expected).
+
+Lift({Milk, Bread}⇒{Eggs})= Support({Milk, Bread, Eggs})/Support({Milk, Bread})×Support({Eggs})
 
 ## 2. Data Preprocessing
 ## 3. Linear Classifiers
