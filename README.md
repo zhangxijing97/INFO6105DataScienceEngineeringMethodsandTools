@@ -55,6 +55,11 @@ h(xi)≈yi for all (xi,yi)∈D<br>
 
 **Validation Set:** The validation set is another independent subset used during the training phase to fine-tune the model and avoid overfitting.<br>
 
+**Best practice:**<br>
+Train : 70%-80%<br>
+Validation : 5%-10%<br>
+Test: 10%-25%<br>
+
 ## 2. Data Preprocessing
 ## 3. Linear Classifiers
 ## 4. Non-Linear Classifiers
