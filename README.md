@@ -64,7 +64,13 @@ Test: 10%-25%<br>
 **Association rule:** Association rule mining is a rule- based machine learning method for discovering interesting relations between variables in transactional databases.<br>
 Example: basket analysis, where the goal is to uncover associations between items frequently purchased together.<br>
 
-***Association rule:***
+**Support:** Support measures the frequency of occurrence of a particular combination of items in a dataset. It is the proportion of transactions that contain the set of items being considered. High support values indicate that the itemset is common in the dataset.<br>
+
+**Confidence:** Confidence measures the likelihood that an associated rule holds true. It is the conditional probability of finding the consequent (item B) given the antecedent (item A). High confidence indicates a strong association between the antecedent and consequent.<br>
+
+**Apriori Algorithm:** The Apriori algorithm is a widely used algorithm for mining association rules. It works by iteratively discovering frequent itemsets (sets of items that occur together frequently) and generating association rules based on these itemsets.<br>
+
+**Lift:** Lift measures the strength of association between an antecedent and consequent, taking into account the support of both itemsets. A lift greater than 1 indicates that the presence of the antecedent increases the likelihood of the consequent.<br>
 
 
 ## 2. Data Preprocessing
