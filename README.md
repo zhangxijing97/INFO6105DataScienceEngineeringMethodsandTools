@@ -101,7 +101,13 @@ Lift({Milk, Bread}⇒{Eggs})= Support({Milk, Bread, Eggs})/Support({Milk, Bread}
 
 ### Loss Function in Unsupervised
 Unsupervised learning is about modeling the world<br>
+**K-Means Clustering:** In k-means clustering, the goal is to partition a dataset into k clusters, where each data point belongs to the cluster with the nearest centroid.<br>
+**Loss Function:** The loss function in k-means is typically the sum of squared distances between each data point and its assigned cluster centroid. The objective is to minimize this sum.<br>
 
+Loss = ∑i=1N ||xi - cji ||^2<br>
+N: the number of data points<br>
+xi: a data point<br>
+cji: centroid of the cluster to which xi is assigned<br>
 
 ## 2. Data Preprocessing
 ## 3. Linear Classifiers
