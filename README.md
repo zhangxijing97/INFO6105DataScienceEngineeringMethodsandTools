@@ -7,6 +7,7 @@
 - [Training Model](#Training-Model)
 - [Train / Test/ Validation](#Train-Test-Validation)
 - [Some Unsupervised Approaches](#Some-Unsupervised-Approaches)
+- [Loss Function in Unsupervised](#Loss-Function-in-Unsupervised)
 
 2. [Data Preprocessing](#2-Data-Preprocessing)
 
@@ -64,6 +65,8 @@ Test: 10%-25%<br>
 **Association rule:** Association rule mining is a rule- based machine learning method for discovering interesting relations between variables in transactional databases.<br>
 Example: basket analysis, where the goal is to uncover associations between items frequently purchased together.<br>
 
+**Apriori Algorithm:** The Apriori algorithm is a widely used algorithm for mining association rules. It works by iteratively discovering frequent itemsets (sets of items that occur together frequently) and generating association rules based on these itemsets.<br>
+
 Rule: X => Y<br>
 X: antecedent (or left-hand side) items that when observed<br>
 Y: consequent (or right-hand side) items that are expected or likely to be present when the conditions in the antecedent are mets<br>
@@ -83,8 +86,6 @@ frq(X, Y): This is the count of transactions where both the antecedent (X) and t
 frq(X): This is the count of transactions where the antecedent (X) is present.<br>
 Confidence({Milk, Bread}⇒{Eggs}) = Number of transactions containing Milk, Bread, and Eggs/Number of transactions containing Milk and Bread<br>
 
-**Apriori Algorithm:** The Apriori algorithm is a widely used algorithm for mining association rules. It works by iteratively discovering frequent itemsets (sets of items that occur together frequently) and generating association rules based on these itemsets.<br>
-
 **Lift:** Lift measures the strength of association between an antecedent and consequent, taking into account the support of both itemsets. A lift greater than 1 indicates that the presence of the antecedent increases the likelihood of the consequent.<br>
 Lift = Support(X,Y)/[Support(X)*Support(Y)]<br>
 Support(X, Y): This is the support of the itemset containing both X and Y<br>
@@ -97,6 +98,10 @@ Lift > 1: There is a positive association between X and Y (X and Y are more like
 Lift < 1: There is a negative association between X and Y (X and Y are less likely to occur together than expected).<br>
 
 Lift({Milk, Bread}⇒{Eggs})= Support({Milk, Bread, Eggs})/Support({Milk, Bread})×Support({Eggs})<br>
+
+### Loss Function in Unsupervised
+Unsupervised learning is about modeling the world<br>
+
 
 ## 2. Data Preprocessing
 ## 3. Linear Classifiers
