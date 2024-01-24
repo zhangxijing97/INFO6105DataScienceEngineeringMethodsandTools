@@ -34,3 +34,5 @@ scaler = preprocessing.StandardScaler()
 scaler.fit(fld1_array)
 scaled_fld1=scaler.transform(fld1_array)
 print(scaled_fld1)
+
+#%%

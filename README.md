@@ -3,10 +3,10 @@
 ## Table of Contents
 
 1. [Introduction to Data Science](#1-Introduction-to-Data-Science)
-- [Some Supervised Approaches](#Some-Supervised-Approaches)
+- [Supervised Approaches](#Supervised-Approaches)
 - [Training Model](#Training-Model)
 - [Train / Test/ Validation](#Train-Test-Validation)
-- [Some Unsupervised Approaches](#Some-Unsupervised-Approaches)
+- [Unsupervised Approaches](#Unsupervised-Approaches)
 - [Loss Function in Unsupervised](#Loss-Function-in-Unsupervised)
 
 2. [Data Preprocessing](#2-Data-Preprocessing)
@@ -30,7 +30,7 @@
 11. [Introduction to Big-data Analysis](#11-Introduction-to-Big-data-Analysis)
 
 ## 1. Introduction to Data Science
-### Some Supervised Approaches
+### Supervised Approaches
 **Regression:** Learn a line/curve (the model) using training data consisting of Input-output pairs. Use it to predict the outputs for new inputs<br>
 SVM(Support Vector Machines): Support Vector Machine (SVM) models have the ability to perform a non-linear regression / classification by mapping their inputs into high-dimensional feature spaces<br>
 
@@ -60,7 +60,7 @@ Train : 70%-80%<br>
 Validation : 5%-10%<br>
 Test: 10%-25%<br>
 
-### Some Unsupervised Approaches
+### Unsupervised Approaches
 **Clustering:** Learn the grouping structure for a given set of unlabeled inputs<br>
 **Association rule:** Association rule mining is a rule- based machine learning method for discovering interesting relations between variables in transactional databases.<br>
 Example: basket analysis, where the goal is to uncover associations between items frequently purchased together.<br>
