@@ -88,3 +88,5 @@ linkage_data = linkage(train_feat, method='single', metric='euclidean')
 dendrogram(linkage_data, truncate_mode = 'level' ,p=5)
 plt.show()
 
+
+#%%
