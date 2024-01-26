@@ -75,18 +75,21 @@ A, B => C: it suggests that when both items A and B are present (antecedent), th
 {Milk, Bread} => {Eggs}: customers who buy both milk and bread are likely to buy eggs as well.<br>
 
 **Support:** Support measures the frequency of occurrence of a particular combination of items in a dataset. High support values indicate that the itemset is common in the dataset.<br>
+
 Support = frq(X,Y)/N<br>
 frq(X, Y): This is the count of transactions where the itemset (X, Y) is present.<br>
 N: This represents the total number of transactions or instances in the dataset.<br>
 Support({Milk,Bread})= Number of transactions containing both Milk and Bread/Total number of transactions in the dataset<br>
 
 **Confidence:** Confidence measures the likelihood that an associated rule holds true. It is the conditional probability of finding the consequent (item B) given the antecedent (item A). High confidence indicates a strong association between the antecedent and consequent.<br>
+
 Confidence = frq(X,Y)/frq(X)<br>
 frq(X, Y): This is the count of transactions where both the antecedent (X) and the consequent (Y) are present.<br>
 frq(X): This is the count of transactions where the antecedent (X) is present.<br>
 Confidence({Milk, Bread}⇒{Eggs}) = Number of transactions containing Milk, Bread, and Eggs/Number of transactions containing Milk and Bread<br>
 
 **Lift:** Lift measures the strength of association between an antecedent and consequent, taking into account the support of both itemsets. A lift greater than 1 indicates that the presence of the antecedent increases the likelihood of the consequent.<br>
+
 Lift = Support(X,Y)/[Support(X)*Support(Y)]<br>
 Support(X, Y): This is the support of the itemset containing both X and Y<br>
 Support(X): This is the support of the antecedent X<br>
