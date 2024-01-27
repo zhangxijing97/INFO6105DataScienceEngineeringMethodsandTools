@@ -11,7 +11,7 @@
 
 2. [Data Preprocessing](#2-Data-Preprocessing)
 - [Why Data Preprocessing](#Why-Data-Preprocessing)
-- [Multiple Imputation by Chained Equation(MICE))](#Multiple-Imputation-by-Chained-Equations-(-MICE-))
+- [Multiple Imputation by Chained Equation(MICE)](#Multiple-Imputation-by-Chained-Equations)
 
 3. [Linear Classifiers](#3-Linear-Classifiers)
 
@@ -139,7 +139,7 @@ cji: centroid of the cluster to which xi is assigned<br>
 **Data Integration**<br>
 - Combining data from multiple sources into a unified dataset.
 
-### Multiple Imputation by Chained Equations(MICE)
+### Multiple Imputation by Chained Equations
 
 ## 3. Linear Classifiers
 ## 4. Non-Linear Classifiers
