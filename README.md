@@ -10,8 +10,8 @@
 - [Loss Function in Unsupervised](#Loss-Function-in-Unsupervised)
 
 2. [Data Preprocessing](#2-Data-Preprocessing)
-- [Data Preprocessing](#Data-Preprocessing)
-- [Multiple Imputation by Chained Equations(MICE)](#Multiple-Imputation-by-Chained-Equations-MICE)
+- [Why Data Preprocessing](#Why-Data-Preprocessing)
+- [Multiple Imputation by Chained Equations](#Multiple-Imputation-by-Chained-Equations)
 
 3. [Linear Classifiers](#3-Linear-Classifiers)
 
