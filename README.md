@@ -10,6 +10,8 @@
 - [Loss Function in Unsupervised](#Loss-Function-in-Unsupervised)
 
 2. [Data Preprocessing](#2-Data-Preprocessing)
+- [Data Preprocessing](#Data-Preprocessing)
+- [Multiple Imputation by Chained Equations(MICE)](#Multiple-Imputation-by-Chained-Equations-MICE)
 
 3. [Linear Classifiers](#3-Linear-Classifiers)
 
@@ -113,8 +115,8 @@ N: the number of data points<br>
 xi: a data point<br>
 cji: centroid of the cluster to which xi is assigned<br>
 
-### Data Preprocessing
-**Why Data Preprocessing?**<br>
+## 2. Data Preprocessing
+### Why Data Preprocessing
 - Incomplete: e.g., occupation=“ ”<br>
 - Noisy: e.g., Salary=“-10”<br>
 - Inconsistent: e.g., Age=“42” Birthday=“03/07/1997”<br>
@@ -137,7 +139,8 @@ cji: centroid of the cluster to which xi is assigned<br>
 **Data Integration**<br>
 - Combining data from multiple sources into a unified dataset.
 
-## 2. Data Preprocessing
+### Multiple Imputation by Chained Equations(MICE)
+
 ## 3. Linear Classifiers
 ## 4. Non-Linear Classifiers
 ## 5. Decision Trees
