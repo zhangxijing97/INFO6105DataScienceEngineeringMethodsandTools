@@ -113,6 +113,18 @@ N: the number of data points<br>
 xi: a data point<br>
 cji: centroid of the cluster to which xi is assigned<br>
 
+### Data Preprocessing
+**Why Data Preprocessing?**<br>
+- incomplete: e.g., occupation=“ ”<br>
+- noisy: e.g., Salary=“-10”<br>
+- inconsistent: e.g., Age=“42” Birthday=“03/07/1997”<br>
+
+**Data Cleaning**<br>
+
+**Data Transformation**<br>
+**Data Reduction**<br>
+**Data Integration**<br>
+
 ## 2. Data Preprocessing
 ## 3. Linear Classifiers
 ## 4. Non-Linear Classifiers
