@@ -115,15 +115,27 @@ cji: centroid of the cluster to which xi is assigned<br>
 
 ### Data Preprocessing
 **Why Data Preprocessing?**<br>
-- incomplete: e.g., occupation=“ ”<br>
-- noisy: e.g., Salary=“-10”<br>
-- inconsistent: e.g., Age=“42” Birthday=“03/07/1997”<br>
+- Incomplete: e.g., occupation=“ ”<br>
+- Noisy: e.g., Salary=“-10”<br>
+- Inconsistent: e.g., Age=“42” Birthday=“03/07/1997”<br>
 
 **Data Cleaning**<br>
+- Fill in missing values
+- Smooth noisy data
+- Identify or remove outliers
+- Remove duplicates
+- Resolve inconsistencies and discrepancies
 
 **Data Transformation**<br>
+- Normalization 
+- Discretization
+
 **Data Reduction**<br>
+- Dimensionality reduction
+- Numerosity reduction
+
 **Data Integration**<br>
+- Combining data from multiple sources into a unified dataset.
 
 ## 2. Data Preprocessing
 ## 3. Linear Classifiers
