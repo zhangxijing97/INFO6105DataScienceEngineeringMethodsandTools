@@ -140,7 +140,9 @@ cji: centroid of the cluster to which xi is assigned<br>
 - Combining data from multiple sources into a unified dataset.
 
 ### Multiple Imputation by Chained Equations
-<p style="color:red;">This is some red text.</p>
+| Text with Color | Another Text |
+| --------------- | ------------ |
+| <span style="color:red;">Red Text</span> | <span style="color:blue;">Blue Text</span> |
 
 ## 3. Linear Classifiers
 ## 4. Non-Linear Classifiers
