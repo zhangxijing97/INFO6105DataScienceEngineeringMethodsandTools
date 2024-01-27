@@ -11,7 +11,7 @@
 
 2. [Data Preprocessing](#2-Data-Preprocessing)
 - [Why Data Preprocessing](#Why-Data-Preprocessing)
-- [Multiple Imputation by Chained Equations](#Multiple-Imputation-by-Chained-Equations)
+- [Multiple Imputation by Chained Equation(MICE))](#Multiple-Imputation-by-Chained-Equations-(-MICE-))
 
 3. [Linear Classifiers](#3-Linear-Classifiers)
 
