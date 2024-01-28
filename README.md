@@ -140,9 +140,22 @@ cji: centroid of the cluster to which xi is assigned<br>
 - Combining data from multiple sources into a unified dataset.
 
 ### Multiple Imputation by Chained Equations
-| Text with Color | Another Text |
-| --------------- | ------------ |
-| <span style="color:red;">Red Text</span> | <span style="color:blue;">Blue Text</span> |
+
+```
+import pandas as pd
+from sklearn.experimental import enable_iterative_imputer
+from sklearn.impute import IterativeImputer
+
+# Read data
+input_dataframe = pd.read_csv("/Users/zhangxijing/MasterNEU/INFO6105DataScienceEngineeringMethodsandTools/Dataset/Microbiology_Dataset.csv")
+print(input_dataframe)
+
+# MICE
+imputer = IterativeImputer(max_iter=10, random_state=0)
+imputed_dataset = imputer.fit_transform(input_dataframe)
+imputed_dataframe = pd.DataFrame(imputed_dataset, columns=input_dataframe.columns)
+print(imputed_dataframe)
+```
 
 ## 3. Linear Classifiers
 ## 4. Non-Linear Classifiers
@@ -153,3 +166,7 @@ cji: centroid of the cluster to which xi is assigned<br>
 ## 9. Association Rules
 ## 10. Introduction to Neural Networks and Deep Learning
 ## 11. Introduction to Big-data Analysis
+
+<!-- | Text with Color | Another Text |
+| --------------- | ------------ |
+| <span style="color:red;">Red Text</span> | <span style="color:blue;">Blue Text</span> | -->
