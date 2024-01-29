@@ -286,11 +286,13 @@ input_dataframe = pd.read_csv("/Users/zhangxijing/MasterNEU/INFO6105DataScienceE
 print(input_dataframe)
 
 # MICE
-imputer = IterativeImputer(max_iter=10, random_state=0)
-imputed_dataset = imputer.fit_transform(input_dataframe)
-imputed_dataframe = pd.DataFrame(imputed_dataset, columns=input_dataframe.columns)
+imputer = IterativeImputer(max_iter=10, random_state=0) # Imputer Initialization
+imputed_dataset = imputer.fit_transform(input_dataframe) # Perform imputation
+imputed_dataframe = pd.DataFrame(imputed_dataset, columns=input_dataframe.columns) # Converts the imputed dataset (numpy array) into a pandas DataFrame.
 print(imputed_dataframe)
 ```
+
+
 
 ## 3. Linear Classifiers
 ## 4. Non-Linear Classifiers
