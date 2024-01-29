@@ -194,6 +194,23 @@ Step 1: Impute all missing values with the mean<br>
 Step 2: Romve the 'Age' inputed value<br>
 
 Step 3: Use LinearRegression to estimate the missing age, the predicted age is 36.2532<br>
+```
+from sklearn.linear_model import LinearRegression
+import numpy as np
+
+# Example data
+X = np.array([[7, 50], [3, 134], [5, 110], [7, 140], [9, 170]])  # Experience and Salary
+y = np.array([25, 27, 29, 31, 33])  # Age
+
+# Create linear regression model
+model = LinearRegression()
+model.fit(X, y)
+
+# Predict the missing age
+predicted_age = model.predict([[11, 200]])  # Experience = 11, Salary = 200
+print("Predicted Age:", predicted_age[0])
+# Predicted Age: 36.25316455696203
+```
 | Age | Experience | Salary |
 |-----|------------|--------|
 | 25  | 7          | 50     |
@@ -228,20 +245,18 @@ Step 6:
 iteration 2:
 | Age | Experience | Salary |     | Age | Experience | Salary |     | Age | Experience | Salary  |
 |-----|------------|--------|-----|-----|------------|--------|-----|-----|------------|---------|
-| 25  | 1.8538     | 50     |     | 25  | 7          | 50     |     | 0   | -5.1462    | 0       |
-| 27  | 3          | 72.7748|     | 27  | 3          | 134    |     | 0   | 0          | -61.2252|
+| 25  | 1.8538     | 50     |     | 25  | 0.9172     | 50     |     | 0   | 0.9366     | 0       |
+| 27  | 3          | 72.7748|     | 27  | 3          | 80.7385|     | 0   | 0          | 7.9637  |
 | 29  | 5          | 110    |  -  | 29  | 5          | 110    |  =  | 0   | 0          | 0       |
 | 31  | 7          | 140    |     | 31  | 7          | 140    |     | 0   | 0          | 0       |
 | 33  | 9          | 170    |     | 33  | 9          | 170    |     | 0   | 0          | 0       |
-| 36.2532  | 11    | 200    |     | 36.2532  | 11    | 200    |     | 7.2532  | 0      | 0       |
-
-
+| 36.2532  | 11    | 200    |     | 34.8732  | 11    | 200    |     | 1.38| 0          | 0       |
 ```
 from sklearn.linear_model import LinearRegression
 import numpy as np
 
 # Example data
-X = np.array([[7, 50], [3, 134], [5, 110], [7, 140], [9, 170]])  # Experience and Salary
+X = np.array([[1.8538, 50], [3, 72.7748], [5, 110], [7, 140], [9, 170]])  # Experience and Salary
 y = np.array([25, 27, 29, 31, 33])  # Age
 
 # Create linear regression model
@@ -251,8 +266,14 @@ model.fit(X, y)
 # Predict the missing age
 predicted_age = model.predict([[11, 200]])  # Experience = 11, Salary = 200
 print("Predicted Age:", predicted_age[0])
-# Predicted Age: 36.25316455696203
+# Predicted Age: 34.87326219387428
 ```
+
+iteration 3:<br>
+...<br>
+
+iteration 4:<br>
+...<br>
 
 ```
 import pandas as pd
