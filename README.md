@@ -149,13 +149,13 @@ In univariate imputation, each missing value in a dataset is imputed (filled in)
 - Constant Value: All missing values are filled in with a constant value, such as zero. This is a basic approach and is rarely used unless there is a strong justification.<br>
 
 Example:
-| Student | Age | Test Score |
-|---------|-----|------------|
-| A       | 14  | 85         |
-| B       | 13  | Missing    |
-| C       | 14  | 90         |
-| D       | 13  | 75         |
-| E       | 14  | Missing    |
+| Student | Age | Test Score | | Student | Age | Test Score (Imputed) |
+|---------|-----|------------| |---------|-----|----------------------|
+| A       | 14  | 85         | | A       | 14  | 85                   |
+| B       | 13  | Missing    | | B       | 13  | 83.33                |
+| C       | 14  | 90         | | C       | 14  | 90                   |
+| D       | 13  | 75         | | D       | 13  | 75                   |
+| E       | 14  | Missing    | | E       | 14  | 83.33                |
 
 Mean Test Score = (85 + 90 + 75) / 3 = 83.33<br>
 
