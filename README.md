@@ -141,6 +141,13 @@ cji: centroid of the cluster to which xi is assigned<br>
 
 ### Multiple Imputation by Chained Equations
 
+**Univariate Imputation**<br>
+In univariate imputation, each missing value in a dataset is imputed (filled in) based on information from the same variable.<br>
+
+- Mean/Median/Mode Imputation: Missing values are replaced with the mean, median, or mode of the observed values in the same variable. This is simple and often effective but can distort the distribution of the data and underestimate the variability.<br>
+- Random Sampling: Missing values are replaced with a value drawn randomly from the observed values of the same variable. This maintains the distribution but doesn't use any other information that might be helpful.<br>
+- Constant Value: All missing values are filled in with a constant value, such as zero. This is a basic approach and is rarely used unless there is a strong justification.<br>
+
 ```
 import pandas as pd
 from sklearn.experimental import enable_iterative_imputer
