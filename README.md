@@ -148,7 +148,7 @@ In univariate imputation, each missing value in a dataset is imputed (filled in)
 - Random Sampling: Missing values are replaced with a value drawn randomly from the observed values of the same variable. This maintains the distribution but doesn't use any other information that might be helpful.<br>
 - Constant Value: All missing values are filled in with a constant value, such as zero. This is a basic approach and is rarely used unless there is a strong justification.<br>
 
-Example:
+Example:<br>
 | Student | Age | Test Score |
 |---------|-----|------------|
 | A       | 14  | 85         |
@@ -159,18 +159,50 @@ Example:
 
 Mean Test Score = (85 + 90 + 75) / 3 = 83.33<br>
 
-| Student | Age | Test Score (Imputed) |
-|---------|-----|----------------------|
-| A       | 14  | 85                   |
-| B       | 13  | 83.33                |
-| C       | 14  | 90                   |
-| D       | 13  | 75                   |
-| E       | 14  | 83.33                |
+| Student | Age | Test Score |
+|---------|-----|------------|
+| A       | 14  | 85         |
+| B       | 13  | 83.33      |
+| C       | 14  | 90         |
+| D       | 13  | 75         |
+| E       | 14  | 83.33      |
 
 **Multivariate Imputation**<br>
 Multivariate imputation considers the relationships between different variables in the dataset when imputing missing values.<br>
 
 - Multiple Imputation: It involves creating multiple complete datasets by imputing the missing values multiple times. Statistical models (like regression models) are used, considering the relationships among the variables. The results from these multiple datasets are then combined to give a final estimate. This method is useful as it also estimates the uncertainty due to missing data.<br>
+
+| Age | Experience | Salary |
+|-----|------------|--------|
+| 25  |            | 50     |
+| 27  | 3          |        |
+| 29  | 5          | 110    |
+| 31  | 7          | 140    |
+| 33  | 9          | 170    |
+|     | 11         | 200    |
+
+Step 1: Impute all missing values with the mean<br>
+| Age | Experience | Salary |
+|-----|------------|--------|
+| 25  | 7          | 50     |
+| 27  | 3          | 134    |
+| 29  | 5          | 110    |
+| 31  | 7          | 140    |
+| 33  | 9          | 170    |
+| 29  | 11         | 200    |
+
+Step 2: Romve the 'Age' inputed value<br>
+
+Step 3: Use LinearRegression to estimate the missing age, the predicted age is 36.2532<br>
+| Age | Experience | Salary |
+|-----|------------|--------|
+| 25  | 7          | 50     |
+| 27  | 3          | 134    |
+| 29  | 5          | 110    |
+| 31  | 7          | 140    |
+| 33  | 9          | 170    |
+| 36.2532  | 11         | 200    |
+
 
 ```
 import pandas as pd
