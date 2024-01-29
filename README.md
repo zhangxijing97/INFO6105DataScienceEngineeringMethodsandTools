@@ -201,8 +201,47 @@ Step 3: Use LinearRegression to estimate the missing age, the predicted age is 3
 | 29  | 5          | 110    |
 | 31  | 7          | 140    |
 | 33  | 9          | 170    |
-| 36.2532  | 11         | 200    |
+| 36.2532  | 11    | 200    |
 
+Step 4: Romve the 'Experience' inputed value, and use LinearRegression to estimate the missing age, the predicted Experience is 1.8538<br>
+
+Step 5: Romve the 'Salary' inputed value, and use LinearRegression to estimate the missing age, the predicted Experience is 72.7748, iteration 1 done<br>
+| Age | Experience | Salary |
+|-----|------------|--------|
+| 25  | 1.8538     | 50     |
+| 27  | 3          | 72.7748|
+| 29  | 5          | 110    |
+| 31  | 7          | 140    |
+| 33  | 9          | 170    |
+| 36.2532  | 11    | 200    |
+
+Step 6: 
+| Age | Experience | Salary | Age | Experience | Salary | Age | Experience | Salary |
+|-----|------------|--------|-----|------------|--------|-----|------------|--------|
+| 25  | 1.8538     | 50     | 25  | 1.8538     | 50     | 25  | 1.8538     | 50     |
+| 27  | 3          | 72.7748| 27  | 3          | 72.7748| 27  | 3          | 72.7748|
+| 29  | 5          | 110    | 29  | 5          | 110    | 29  | 5          | 110    |
+| 31  | 7          | 140    | 31  | 7          | 140    | 31  | 7          | 140    |
+| 33  | 9          | 170    | 33  | 9          | 170    | 33  | 9          | 170    |
+| 36.2532  | 11    | 200    | 36.2532  | 11    | 200    | 36.2532  | 11    | 200    |
+
+```
+from sklearn.linear_model import LinearRegression
+import numpy as np
+
+# Example data
+X = np.array([[7, 50], [3, 134], [5, 110], [7, 140], [9, 170]])  # Experience and Salary
+y = np.array([25, 27, 29, 31, 33])  # Age
+
+# Create linear regression model
+model = LinearRegression()
+model.fit(X, y)
+
+# Predict the missing age
+predicted_age = model.predict([[11, 200]])  # Experience = 11, Salary = 200
+print("Predicted Age:", predicted_age[0])
+# Predicted Age: 36.25316455696203
+```
 
 ```
 import pandas as pd
