@@ -288,7 +288,8 @@ print(input_dataframe)
 # MICE
 imputer = IterativeImputer(max_iter=10, random_state=0) # Imputer Initialization
 imputed_dataset = imputer.fit_transform(input_dataframe) # Perform imputation
-imputed_dataframe = pd.DataFrame(imputed_dataset, columns=input_dataframe.columns) # Converts the imputed dataset (numpy array) into a pandas DataFrame.
+# Converts the imputed dataset (numpy array) into a pandas DataFrame.
+imputed_dataframe = pd.DataFrame(imputed_dataset, columns=input_dataframe.columns)
 print(imputed_dataframe)
 ```
 
