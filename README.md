@@ -275,6 +275,7 @@ iteration 3:<br>
 iteration 4:<br>
 ...<br>
 
+MICE Imputation code:
 ```
 import pandas as pd
 from sklearn.experimental import enable_iterative_imputer
