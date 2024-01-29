@@ -148,6 +148,11 @@ In univariate imputation, each missing value in a dataset is imputed (filled in)
 - Random Sampling: Missing values are replaced with a value drawn randomly from the observed values of the same variable. This maintains the distribution but doesn't use any other information that might be helpful.<br>
 - Constant Value: All missing values are filled in with a constant value, such as zero. This is a basic approach and is rarely used unless there is a strong justification.<br>
 
+**Multivariate Imputation**<br>
+Multivariate imputation considers the relationships between different variables in the dataset when imputing missing values.<br>
+
+- Multiple Imputation: It involves creating multiple complete datasets by imputing the missing values multiple times. Statistical models (like regression models) are used, considering the relationships among the variables. The results from these multiple datasets are then combined to give a final estimate. This method is useful as it also estimates the uncertainty due to missing data.<br>
+
 ```
 import pandas as pd
 from sklearn.experimental import enable_iterative_imputer
