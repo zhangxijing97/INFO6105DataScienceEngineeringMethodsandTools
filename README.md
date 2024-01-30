@@ -292,7 +292,7 @@ imputed_dataframe = pd.DataFrame(imputed_dataset, columns=input_dataframe.column
 print(imputed_dataframe)
 ```
 
-
+### Binning
 
 ## 3. Linear Classifiers
 ## 4. Non-Linear Classifiers
