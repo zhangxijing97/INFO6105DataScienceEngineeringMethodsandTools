@@ -304,6 +304,20 @@ Robustness in Statistics and Mathematics: In statistical and mathematical contex
 imputed_dataframe['MIC_bin'] = pd.qcut(imputed_dataframe['MIC'], q=3)
 imputed_dataframe['MIC'] = pd.Series ([interval.mid for interval in imputed_dataframe['MIC_bin']])
 print(imputed_dataframe)
+
+#       Original Data Binned Category  Midpoints
+# 0           128.000    (1.0, 256.0]   128.5000
+# 1             0.125  (0.001, 0.125]     0.0630
+# 2             0.064  (0.001, 0.125]     0.0630
+# 3             1.000    (0.125, 1.0]     0.5625
+# 4             3.000    (1.0, 256.0]   128.5000
+# ...             ...             ...        ...
+# 1717          0.190    (0.125, 1.0]     0.5625
+# 1718          0.190    (0.125, 1.0]     0.5625
+# 1719          0.190    (0.125, 1.0]     0.5625
+# 1720          0.750    (0.125, 1.0]     0.5625
+# 1721          0.190    (0.125, 1.0]     0.5625
+# [1722 rows x 3 columns]
 ```
 
 ```
@@ -335,10 +349,8 @@ print(df)
 # 121              3      (2.0, 4.0]     3.0000
 # 122              7     (4.0, 10.0]     7.0000
 # 123              1    (0.999, 2.0]     1.4995
-
 # [124 rows x 3 columns]
 ```
-
 
 ## 3. Linear Classifiers
 ## 4. Non-Linear Classifiers
