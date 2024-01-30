@@ -293,16 +293,16 @@ print(imputed_dataframe)
 ```
 
 ### Binning
-Equal-Width Binning: Divides the data range into equal-width intervals. For example, grouping ages into bins like 0-10, 11-20, 21-30, etc.<br>
+**Equal-Width Binning:**<br> Divides the data range into equal-width intervals. For example, grouping ages into bins like 0-10, 11-20, 21-30, etc.<br>
 
-Equal-Frequency Binning: Divides the data into intervals containing approximately the same number of data points. This method can be more robust to data distribution variations.<br>
+**Equal-Frequency Binning:**<br> Divides the data into intervals containing approximately the same number of data points. This method can be more robust to data distribution variations.<br>
 
-Robustness in Statistics and Mathematics: In statistical and mathematical contexts, a robust statistic or method is one that is not heavily influenced by outliers or extreme values. It can provide reliable results even when the data deviates from the expected distribution or contains anomalies.<br>
+**Robustness:**<br> In statistical and mathematical contexts, a robust statistic or method is one that is not heavily influenced by outliers or extreme values. It can provide reliable results even when the data deviates from the expected distribution or contains anomalies.<br>
 
 ```
 # Binning
-imputed_dataframe['MIC_bin'] = pd.qcut(imputed_dataframe['MIC'], q=3)
-imputed_dataframe['MIC'] = pd.Series ([interval.mid for interval in imputed_dataframe['MIC_bin']])
+imputed_dataframe['MIC_bin'] = pd.qcut(imputed_dataframe['MIC'], q=3) # Divides the data into 3 quantile-based bins
+imputed_dataframe['MIC'] = pd.Series ([interval.mid for interval in imputed_dataframe['MIC_bin']]) # Extracting Midpoints of Bins
 print(imputed_dataframe)
 
 #       Original Data Binned Category  Midpoints
