@@ -12,6 +12,7 @@
 2. [Data Preprocessing](#2-Data-Preprocessing)
 - [Why Data Preprocessing](#Why-Data-Preprocessing)
 - [Multiple Imputation by Chained Equation(MICE)](#Multiple-Imputation-by-Chained-Equations)
+- [Binning](#Binning)
 
 3. [Linear Classifiers](#3-Linear-Classifiers)
 
@@ -195,6 +196,7 @@ Step 2: Romve the 'Age' inputed value<br>
 
 Step 3: Use LinearRegression to estimate the missing age, the predicted age is 36.2532<br>
 ```
+# LinearRegression
 from sklearn.linear_model import LinearRegression
 import numpy as np
 
@@ -252,6 +254,7 @@ iteration 2:
 | 33  | 9          | 170    |     | 33  | 9          | 170    |     | 0   | 0          | 0       |
 | 36.2532  | 11    | 200    |     | 34.8732  | 11    | 200    |     | 1.38| 0          | 0       |
 ```
+# LinearRegression
 from sklearn.linear_model import LinearRegression
 import numpy as np
 
@@ -275,8 +278,8 @@ iteration 3:<br>
 iteration 4:<br>
 ...<br>
 
-MICE Imputation code:
 ```
+# MICE Imputation
 import pandas as pd
 from sklearn.experimental import enable_iterative_imputer
 from sklearn.impute import IterativeImputer
@@ -351,6 +354,8 @@ print(df)
 # 123              1    (0.999, 2.0]     1.4995
 # [124 rows x 3 columns]
 ```
+
+
 
 ## 3. Linear Classifiers
 ## 4. Non-Linear Classifiers
