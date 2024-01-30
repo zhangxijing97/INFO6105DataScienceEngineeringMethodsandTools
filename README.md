@@ -293,6 +293,52 @@ print(imputed_dataframe)
 ```
 
 ### Binning
+Equal-Width Binning: Divides the data range into equal-width intervals. For example, grouping ages into bins like 0-10, 11-20, 21-30, etc.<br>
+
+Equal-Frequency Binning: Divides the data into intervals containing approximately the same number of data points. This method can be more robust to data distribution variations.<br>
+
+Robustness in Statistics and Mathematics: In statistical and mathematical contexts, a robust statistic or method is one that is not heavily influenced by outliers or extreme values. It can provide reliable results even when the data deviates from the expected distribution or contains anomalies.<br>
+
+```
+# Binning
+imputed_dataframe['MIC_bin'] = pd.qcut(imputed_dataframe['MIC'], q=3)
+imputed_dataframe['MIC'] = pd.Series ([interval.mid for interval in imputed_dataframe['MIC_bin']])
+print(imputed_dataframe)
+```
+
+```
+# Binning
+# Your data
+data = np.array([2, 2, 2, 4, 4, 3, 1, 4, 2, 1, 3, 4, 1, 1, 4, 7, 4, 1, 1, 2, 4, 3, 4, 3, 3, 2, 5, 2, 3, 2, 3, 4, 2, 10, 4, 4, 6, 3, 3, 1, 1, 2, 1, 3, 2, 4, 5, 2, 4, 3, 2, 3, 4, 3, 1, 1, 6, 3, 6, 5, 7, 2, 1, 1, 6, 5, 1, 1, 1, 2, 2, 1, 2, 2, 4, 4, 1, 5, 7, 2, 1, 2, 1, 5, 3, 1, 1, 2, 3, 3, 5, 4, 4, 6, 1, 4, 4, 1, 3, 4, 4, 5, 4, 4, 1, 1, 3, 1, 2, 1, 3, 7, 2, 1, 1, 3, 3, 6, 1, 6, 2, 3, 7, 1])
+
+# Perform quantile-based binning
+bins = pd.qcut(data, q=3)
+
+# Create a Pandas Series with the midpoints of the bins
+midpoints_series = pd.Series([interval.mid for interval in bins])
+
+# Create a DataFrame to visualize the original data, binned categories, and midpoints
+df = pd.DataFrame({'Original Data': data, 'Binned Category': bins, 'Midpoints': midpoints_series})
+
+# Display the DataFrame
+print(df)
+```
+
+     Original Data Binned Category  Midpoints
+0                2    (0.999, 2.0]     1.4995
+1                2    (0.999, 2.0]     1.4995
+2                2    (0.999, 2.0]     1.4995
+3                4      (2.0, 4.0]     3.0000
+4                4      (2.0, 4.0]     3.0000
+..             ...             ...        ...
+119              6     (4.0, 10.0]     7.0000
+120              2    (0.999, 2.0]     1.4995
+121              3      (2.0, 4.0]     3.0000
+122              7     (4.0, 10.0]     7.0000
+123              1    (0.999, 2.0]     1.4995
+
+[124 rows x 3 columns]
+
 
 ## 3. Linear Classifiers
 ## 4. Non-Linear Classifiers
