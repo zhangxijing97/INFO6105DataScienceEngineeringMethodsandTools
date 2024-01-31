@@ -389,9 +389,20 @@ pMax: proportion of the most common class in the node<br>
 
 - Maximum (1 - 1/Number_of_classes) when records are equally distributed among all classes, implying least interesting information<br>
 - Minimum (0) when all records belong to one class, implying most interesting information<br>
-​|-------------|--------|
-|**Name:**    |John Doe|
-|**Position:**|CEO     |
+
+| C1              | 0               |
+| --------------- | --------------- |
+| C2              | 6               |
+P(C1) = 0/6 = 0<br>
+P(C2) = 6/6 = 1<br>
+Classification Error = 1 - max(0, 1) = 1 - 1 = 0<br>
+
+| C1              | 2               |
+| --------------- | --------------- |
+| C2              | 4               |
+P(C1) = 2/6<br>
+P(C2) = 4/6<br>
+Classification Error = 1 - max(2/6, 4/6) = 1 - 4/6 = 1/3<br>
 
 
 ## 4. Linear Classifiers
