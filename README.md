@@ -387,9 +387,11 @@ Gain = 0.500 – 0.361 = 0.139<br>
 Classification Error = 1−pMax<br>
 pMax: proportion of the most common class in the node<br>
 
-– Maximum (1 - 1/Number_of_classes) when records are equally distributed among all classes, implying least interesting information<br>
-– Minimum (0) when all records belong to one class, implying most interesting information<br>
-​
+- Maximum (1 - 1/Number_of_classes) when records are equally distributed among all classes, implying least interesting information<br>
+- Minimum (0) when all records belong to one class, implying most interesting information<br>
+​|-------------|--------|
+|**Name:**    |John Doe|
+|**Position:**|CEO     |
 
 
 ## 4. Linear Classifiers
