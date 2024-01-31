@@ -440,6 +440,12 @@ Entropy = - (2/6)*log2(2/6) - (4/6)*log2(4/6) = 0.92<br>
 | Entropy and Gini are more sensitive to changes in the node probabilities than the misclassification error rate | ![Alt Text](Image/Picture1.png) |
 
 ### Information Gain
+Information Gain = Entropy(p) - (∑i=1 k ni/n*Entropy(i))<br>
+ni: number of records in partition i<br>
+
+Information gain has the disadvantage that it prefers attributes with large number of values that split the data into small, pure subsets leads to overfitting to train dataset.<br>
+
+### Gain Ratio (Quinlan’s Gain Ratio)
 
 
 ## 4. Linear Classifiers
