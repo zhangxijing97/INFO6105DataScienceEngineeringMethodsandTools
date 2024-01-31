@@ -387,8 +387,8 @@ Gain = 0.500 – 0.361 = 0.139<br>
 Classification Error = 1−pMax<br>
 pMax: proportion of the most common class in the node<br>
 
-If a node is pure, meaning all instances belong to a single class, the Classification Error is 0, indicating no misclassification.<br>
-In a binary classification context (two classes), if the instances are evenly split between two classes, the Classification Error is 0.5, indicating maximum uncertainty.<br>
+– Maximum (1 - 1/Number_of_classes) when records are equally distributed among all classes, implying least interesting information<br>
+– Minimum (0) when all records belong to one class, implying most interesting information<br>
 ​
 
 
