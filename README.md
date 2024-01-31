@@ -393,6 +393,7 @@ pMax: proportion of the most common class in the node<br>
 | C1              | 0               |
 | --------------- | --------------- |
 | C2              | 6               |
+
 P(C1) = 0/6 = 0<br>
 P(C2) = 6/6 = 1<br>
 Classification Error = 1 - max(0, 1) = 1 - 1 = 0<br>
@@ -400,6 +401,7 @@ Classification Error = 1 - max(0, 1) = 1 - 1 = 0<br>
 | C1              | 2               |
 | --------------- | --------------- |
 | C2              | 4               |
+
 P(C1) = 2/6<br>
 P(C2) = 4/6<br>
 Classification Error = 1 - max(2/6, 4/6) = 1 - 4/6 = 1/3<br>
