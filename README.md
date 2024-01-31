@@ -384,7 +384,11 @@ Gini(Children) = 6/12*0.278+6/12*0.444 = 0.361<br>
 Gain = 0.500 – 0.361 = 0.139<br>
 
 ### Classification Error
-Classification Error = 1−pmax<br>
+Classification Error = 1−pMax<br>
+pMax: proportion of the most common class in the node<br>
+
+If a node is pure, meaning all instances belong to a single class, the Classification Error is 0, indicating no misclassification.<br>
+In a binary classification context (two classes), if the instances are evenly split between two classes, the Classification Error is 0.5, indicating maximum uncertainty.<br>
 ​
 
 
