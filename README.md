@@ -14,11 +14,11 @@
 - [Multiple Imputation by Chained Equation(MICE)](#Multiple-Imputation-by-Chained-Equations)
 - [Binning](#Binning)
 
-3. [Linear Classifiers](#3-Linear-Classifiers)
+3. [Decision Trees](#5-Decision-Trees)
 
-4. [Non-Linear Classifiers](#4-Non-Linear-Classifiers)
+4. [Linear Classifiers](#3-Linear-Classifiers)
 
-5. [Decision Trees](#5-Decision-Trees)
+5. [Non-Linear Classifiers](#4-Non-Linear-Classifiers)
 
 6. [Ensembles and Super learners](#6-Ensembles-and-Super-learners)
 
@@ -355,11 +355,22 @@ print(df)
 # [124 rows x 3 columns]
 ```
 
+## 3. Decision Trees
+Gain = P – M<br>
+P: Impurity before spilt<br>
+M: Impurity after spilt<br>
 
+Gini = 1 − ∑i=1 n pi^2<br>
+​pi: the proportion of items labeled with class i in the set<br>
 
-## 3. Linear Classifiers
-## 4. Non-Linear Classifiers
-## 5. Decision Trees
+|                 | Parent          |
+| --------------- | --------------- |
+| C1              | 6               |
+| C2              | 6               |
+Gini = 1-(6/12)^2-(6/12)^2 = 0.5<br>
+
+## 4. Linear Classifiers
+## 5. Non-Linear Classifiers
 ## 6. Ensembles and Super learners
 ## 7. Dimensionality Reduction
 ## 8. Clustering Methods
