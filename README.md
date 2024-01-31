@@ -413,7 +413,7 @@ Entropy = − ∑j pi*log2(pi)<br>
 j: number of classes<br>
 pi: proportion of instances belonging to class pi in the dataset<br>
 
-– Maximum (Log Number_of_classes ) when records are equally distributed among all classes implying least information<br>
+– Maximum (Log Number_of_classes) when records are equally distributed among all classes implying least information<br>
 – Minimum (0.0) when all records belong to one class, implying most information<br>
 
 |                 |                 |
@@ -435,8 +435,12 @@ P(C2) = 4/6<br>
 Entropy = - (2/6)*log2(2/6) - (4/6)*log2(4/6) = 0.92<br>
 
 **Comparing Impurity Measures**<br>
-Entropy and Gini are more sensitive to changes in the node probabilities than the misclassification error rate<br>
-![Alt Text](Image/Picture1.png)
+|                 |                 |
+| --------------- | --------------- |
+| Entropy and Gini are more sensitive to changes in the node probabilities than the misclassification error rate | ![Alt Text](Image/Picture1.png) |
+
+### Information Gain
+
 
 ## 4. Linear Classifiers
 ## 5. Non-Linear Classifiers
