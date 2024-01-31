@@ -451,7 +451,8 @@ ni: number of records in partition i<br>
 
 Information gain has the disadvantage that it prefers attributes with large number of values that split the data into small, pure subsets leads to overfitting to train dataset.<br>
 
-### Gain Ratio (Quinlan’s Gain Ratio)
+### Gain Ratio
+Gain Ratio (Quinlan’s Gain Ratio) = 
 
 ## 4. Linear Classifiers
 ## 5. Non-Linear Classifiers
