@@ -14,11 +14,11 @@
 - [Multiple Imputation by Chained Equation(MICE)](#Multiple-Imputation-by-Chained-Equations)
 - [Binning](#Binning)
 
-3. [Decision Trees](#5-Decision-Trees)
+3. [Decision Trees](#3-Decision-Trees)
 
-4. [Linear Classifiers](#3-Linear-Classifiers)
+4. [Linear Classifiers](#4-Linear-Classifiers)
 
-5. [Non-Linear Classifiers](#4-Non-Linear-Classifiers)
+5. [Non-Linear Classifiers](#5-Non-Linear-Classifiers)
 
 6. [Ensembles and Super learners](#6-Ensembles-and-Super-learners)
 
@@ -367,7 +367,19 @@ Gini = 1 − ∑i=1 n pi^2<br>
 | --------------- | --------------- |
 | C1              | 6               |
 | C2              | 6               |
+
 Gini = 1-(6/12)^2-(6/12)^2 = 0.5<br>
+
+|                 | N1              | N2              |
+| --------------- | --------------- | --------------- |
+| C1              | 5               | 2               |
+| C2              | 1               | 4               |
+
+Gini(N1) = 1-(5/6)^2-(1/6)^2 = 0.278<br>
+Gini(N2) = 1-(2/6)^2-(4/6)^2 = 0.444<br>
+Gini(Children) = 6/12*0.278+6/12*0.444 = 0.361<br>
+
+Gain = 0.500 – 0.361 = 0.139<br>
 
 ## 4. Linear Classifiers
 ## 5. Non-Linear Classifiers
