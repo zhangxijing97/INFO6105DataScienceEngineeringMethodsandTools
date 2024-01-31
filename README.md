@@ -356,10 +356,12 @@ print(df)
 ```
 
 ## 3. Decision Trees
+### Gain
 Gain = P – M<br>
 P: Impurity before spilt<br>
 M: Impurity after spilt<br>
 
+### Gini
 Gini = 1 − ∑i=1 n pi^2<br>
 ​pi: the proportion of items labeled with class i in the set<br>
 
@@ -380,6 +382,11 @@ Gini(N2) = 1-(2/6)^2-(4/6)^2 = 0.444<br>
 Gini(Children) = 6/12*0.278+6/12*0.444 = 0.361<br>
 
 Gain = 0.500 – 0.361 = 0.139<br>
+
+### Classification Error
+Classification Error = 1−pmax<br>
+​
+
 
 ## 4. Linear Classifiers
 ## 5. Non-Linear Classifiers
