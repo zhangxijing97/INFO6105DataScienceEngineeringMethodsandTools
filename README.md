@@ -371,9 +371,18 @@ print(df)
 - Each branch from a node represents a possible outcome of the test<br>
 - Each leaf node represents a class label<br>
 
-
 - When a Decision Tree classifies things into categories. it's called a Classification Tree.<br>
 - When a Decision Tree predicts numeric values. it's called a Regression Tree.<br>
+
+| Loves Popcorn | Loves Soda    | Age           | Loves Cool As Ice |
+|---------------|---------------|---------------|-------------------|
+| Yes           | Yes           | 7             | No                |
+| Yes           | No            | 12            | No                |
+| No            | Yes           | 12            | Yes               |
+| No            | Yes           | 12            | Yes               |
+| Yes           | Yes           | 12            | Yes               |
+| Yes           | No            | 12            | No                |
+| No            | No            | 12            | No                |
 
 ### Gain
 Gain = P – M<br>
