@@ -390,6 +390,13 @@ Loves Popcorn(False) -> 2 Loves Cool As Ice(Ture) and 1 Loves Cool As Ice(False)
 Loves Soda(True) -> 3 Loves Cool As Ice(Ture) and 1 Loves Cool As Ice(False)<br>
 Loves Soda(False) -> 0 Loves Cool As Ice(Ture) and 3 Loves Cool As Ice(False)<br>
 
+Loves Soda does a better job predicting who will and will not Loves Cool As Ice<br>
+We want to quantify the differences between Loves Popcorn and Loves Soda<br>
+
+Gini Impurity for a Leaf = 1 - (1/4)^2 - (3/4)^2 = 0.375<br>
+Gini Impurity for a Leaf = 1 - (2/3)^2 - (1/3)^2 = 0.444<br>
+Total Impurity for Loves Popcorn = 0.375*(4/7) + 0.444*(3/7) = 0.405<br>
+
 ### Gain
 Gain = P – M<br>
 P: Impurity before spilt<br>
