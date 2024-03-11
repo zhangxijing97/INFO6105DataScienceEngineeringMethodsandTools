@@ -189,6 +189,9 @@ Multivariate imputation considers the relationships between different variables 
 |     | 11         | 200    |
 
 Step 1: Impute all missing values with the mean<br>
+29 = (25+27+29+31+33)/5<br>
+7 = (3+5+7+9+11)/5<br>
+134 = (50+110+140+170+200)/5<br>
 | Age | Experience | Salary |
 |-----|------------|--------|
 | 25  | 7          | 50     |
