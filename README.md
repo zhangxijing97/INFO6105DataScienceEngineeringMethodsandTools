@@ -384,6 +384,12 @@ print(df)
 | Yes           | No            | 12            | No                |
 | No            | No            | 12            | No                |
 
+Loves Popcorn(True) -> 1 Loves Cool As Ice(Ture) and 3 Loves Cool As Ice(False)<br>
+Loves Popcorn(False) -> 2 Loves Cool As Ice(Ture) and 1 Loves Cool As Ice(False)<br>
+
+Loves Soda(True) -> 3 Loves Cool As Ice(Ture) and 1 Loves Cool As Ice(False)<br>
+Loves Soda(False) -> 0 Loves Cool As Ice(Ture) and 3 Loves Cool As Ice(False)<br>
+
 ### Gain
 Gain = P – M<br>
 P: Impurity before spilt<br>
