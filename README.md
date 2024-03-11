@@ -365,6 +365,15 @@ print(df)
 ```
 
 ## 3. Decision Trees
+![Alt Text](Image/Decision-Tree.png)
+- A decision tree is a hierarchical classification model that uses a tree structure and can be used to support decisions<br>
+- Each internal node represents a test on one attribute (feature)<br>
+- Each branch from a node represents a possible outcome of the test<br>
+- Each leaf node represents a class label<br>
+
+- When a Decision Tree classifies things into categories. it's called a Classification Tree.<br>
+- When a Decision Tree predicts numeric values. it's called a Regression Tree.<br>
+
 ### Gain
 Gain = P – M<br>
 P: Impurity before spilt<br>
