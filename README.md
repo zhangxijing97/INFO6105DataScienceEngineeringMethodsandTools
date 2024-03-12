@@ -580,11 +580,14 @@ Sensitivity = True Positive/(True Positive + False Negative)<br>
 Specificity = True Negative/(True Negative + False Positive)<br>
 ![Alt Text](Image/DecisionTree08.png)
 
-## 4. Linear Classifiers
-## 5. Non-Linear Classifiers
-## 6. Ensembles and Super learners
-## 7. Dimensionality Reduction
-## 8. Clustering Methods
+## 4. Clustering Methods
+- K-means clustering specifically tries to put the data into the number of clusters.<br>
+- Hierarchical clustering tells you, pairwise, what two things are most similar.<br>
+
+## 5. Linear Classifiers
+## 6. Non-Linear Classifiers
+## 7. Ensembles and Super learners
+## 8. Dimensionality Reduction
 ## 9. Association Rules
 ## 10. Introduction to Neural Networks and Deep Learning
 ## 11. Introduction to Big-data Analysis
