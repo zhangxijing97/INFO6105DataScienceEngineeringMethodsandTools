@@ -396,6 +396,16 @@ We want to quantify the differences between Loves Popcorn and Loves Soda<br>
 Gini Impurity for a Leaf = 1 - (1/4)^2 - (3/4)^2 = 0.375<br>
 Gini Impurity for a Leaf = 1 - (2/3)^2 - (1/3)^2 = 0.444<br>
 Total Impurity for Loves Popcorn = 0.375*(4/7) + 0.444*(3/7) = 0.405<br>
+LikewiseTotal Impurity for Loves Soda = 0.214<br>
+
+Calculate Gini Impurity for Age:<br>
+Step1: Calculate Gini Impurity for 9.5, 15, 26.5, 36.5, 44, 66.5<br>
+
+Age < 9.5(True) -> 0 Loves Cool As Ice(Ture) and 1 Loves Cool As Ice(False)<br>
+Age < 9.5(False) -> 3 Loves Cool As Ice(Ture) and 3 Loves Cool As Ice(False)<br>
+Gini Impurity for a Leaf = 1 - (0/1)^2 - (1/1)^2 = 0<br>
+Gini Impurity for a Leaf = 1 - (3/6)^2 - 3(/6)^2 = 0.5<br>
+Total Gini Impurity for Age 9.5 = 0*(1/7) + 0.5*(6/7)= 0.375<br>
 
 ### Gain
 Gain = P – M<br>
