@@ -542,6 +542,37 @@ Hyperparameters can be used as a constraint in decision trees:
 – It is parameterized by the cost complexity parameter, ccp_alpha.<br>
 – Greater values of ccp_alpha increase the number of nodes pruned. When ccp_alpha is set to zero, the tree overfits.<br>
 
+```
+# Predict Resistance (as label) by Patient_Age, Bacteria, and Antimicrobial (as features)
+# Decision Trees
+
+#Input Dateset
+org_df = pd.read_csv("/Users/zhangxijing/MasterNEU/INFO6105DataScienceEngineeringMethodsandTools/Dataset/DS_Dataset.csv")
+clean_df = prepare_data(org_df) # Missing def prepare_data(org_df) here
+
+#Define features to predict Resistance label
+label_df = clean_df.loc[:,clean_df.columns == 'MIC_Interpretation_resistant']
+feat_df = clean_df.loc[:,clean_df.columns != 'MIC_Interpretation_resistant']
+
+#Seperate test and train data
+train_feat, temp_feat, train_label, temp_label = train_test_split(feat_df, label_df, test_size=0.28, random_state=42)
+test_feat, val_feat, test_label, val_label = train_test_split(temp_feat, temp_label, test_size=(20/28), random_state=42)
+
+max_depth_thr = 30                     #Default max_depth threshold for Dtree (Default is 15)
+min_samples_leaf_thr = 5              #Default min_samples_leaf threshold for Dtree (Default is 30)
+min_impurity_thr = 0.001               #Default min_impurity threshold for Dtree (Default is 0.001)
+ccp_thr = 0.0001                        #Default ccp_thr threshold for Dtree (Default is 0.0001)
+
+#Create a model using Hyper-parameters
+treemodel= tree.DecisionTreeClassifier(criterion="gini",
+                                       min_impurity_decrease=min_impurity_thr,
+                                       max_depth=max_depth_thr,
+                                       min_samples_leaf=min_samples_leaf_thr,
+                                       ccp_alpha=ccp_thr)
+#Train the model
+treemodel.fit(train_feat, train_label)
+```
+
 ## 4. Linear Classifiers
 ## 5. Non-Linear Classifiers
 ## 6. Ensembles and Super learners
