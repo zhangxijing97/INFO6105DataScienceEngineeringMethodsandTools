@@ -365,7 +365,7 @@ print(df)
 ```
 
 ## 3. Decision Trees
-![Alt Text](Image/Decision-Tree.png)
+![Alt Text](Image/DecisionTree01.png)
 - A decision tree is a hierarchical classification model that uses a tree structure and can be used to support decisions<br>
 - Each internal node represents a test on one attribute (feature)<br>
 - Each branch from a node represents a possible outcome of the test<br>
@@ -396,7 +396,7 @@ We want to quantify the differences between Loves Popcorn and Loves Soda<br>
 Gini Impurity for a Leaf = 1 - (1/4)^2 - (3/4)^2 = 0.375<br>
 Gini Impurity for a Leaf = 1 - (2/3)^2 - (1/3)^2 = 0.444<br>
 Total Impurity for Loves Popcorn = 0.375*(4/7) + 0.444*(3/7) = 0.405<br>
-LikewiseTotal Impurity for Loves Soda = 0.214<br>
+Likewise Total Impurity for Loves Soda = 0.214<br>
 
 Calculate Gini Impurity for Age:<br>
 Step1: Calculate Gini Impurity for 9.5, 15, 26.5, 36.5, 44, 66.5<br>
@@ -405,7 +405,19 @@ Age < 9.5(True) -> 0 Loves Cool As Ice(Ture) and 1 Loves Cool As Ice(False)<br>
 Age < 9.5(False) -> 3 Loves Cool As Ice(Ture) and 3 Loves Cool As Ice(False)<br>
 Gini Impurity for a Leaf = 1 - (0/1)^2 - (1/1)^2 = 0<br>
 Gini Impurity for a Leaf = 1 - (3/6)^2 - 3(/6)^2 = 0.5<br>
-Total Gini Impurity for Age 9.5 = 0*(1/7) + 0.5*(6/7)= 0.375<br>
+Total Gini Impurity for Age 9.5 = 0*(1/7) + 0.5*(6/7) = 0.429<br>
+Likewise<br>
+Total Gini Impurity for Age 9.5 = 0.429<br>
+Total Gini Impurity for Age 15 = 0.343<br>
+Total Gini Impurity for Age 26.5 = 0.476<br>
+Total Gini Impurity for Age 36.5 = 0.476<br>
+Total Gini Impurity for Age 44 = 0.343<br>
+Total Gini Impurity for Age 66.5 = 0.429<br>
+
+Two candidate thresholds 15 and 44 has lowest Impurity, so we can pick one, we pick 15 here<br>
+|                                       |                                       |
+| ------------------------------------- | ------------------------------------- |
+| ![Alt Text](Image/DecisionTree02.png) | ![Alt Text](Image/DecisionTree03.png) |
 
 ### Gain
 Gain = P – M<br>
@@ -488,7 +500,7 @@ Entropy = - (2/6)*log2(2/6) - (4/6)*log2(4/6) = 0.92<br>
 **Comparing Impurity Measures**<br>
 |                 |                 |
 | --------------- | --------------- |
-| Entropy and Gini are more sensitive to changes in the node probabilities than the misclassification error rate | ![Alt Text](Image/Picture1.png) |
+| Entropy and Gini are more sensitive to changes in the node probabilities than the misclassification error rate | ![Alt Text](Image/DecisionTree04.png) |
 
 ### Information Gain
 Information Gain = Entropy(p) - (∑i=1 k ni/n*Entropy(i))<br>
