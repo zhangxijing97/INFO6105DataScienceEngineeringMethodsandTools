@@ -23,6 +23,7 @@
 - [Information Gain](#Information-Gain)
 - [Gain Ratio](#Gain-Ratio)
 - [Code for Decision Trees](#Code-for-Decision-Trees)
+- [Confusion Matrix](#Confusion-Matrix)
 
 4. [Linear Classifiers](#4-Linear-Classifiers)
 
@@ -572,6 +573,11 @@ treemodel= tree.DecisionTreeClassifier(criterion="gini",
 #Train the model
 treemodel.fit(train_feat, train_label)
 ```
+
+### Confusion Matrix
+Accuracy = (True Positive + True Negative)/(True Positive + True Negative + False Positive + False Negative)<br>
+Sensitivity = True Positive/(True Positive + False Negative)<br>
+Specificity = True Negative/(True Negative + False Positive)<br>
 
 ## 4. Linear Classifiers
 ## 5. Non-Linear Classifiers
