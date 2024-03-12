@@ -15,6 +15,7 @@
 - [Binning](#Binning)
 
 3. [Decision Trees](#3-Decision-Trees)
+- [Create a Decision Tree](#Create-a-Decision-Tree)
 - [Gain](#Gain)
 - [Gini](#Gini)
 - [Classification Error](#Classification-Error)
@@ -374,6 +375,7 @@ print(df)
 - When a Decision Tree classifies things into categories. it's called a Classification Tree.<br>
 - When a Decision Tree predicts numeric values. it's called a Regression Tree.<br>
 
+### Create a Decision Tree
 | Loves Popcorn | Loves Soda    | Age           | Loves Cool As Ice |
 |---------------|---------------|---------------|-------------------|
 | Yes           | Yes           | 7             | No                |
@@ -384,28 +386,33 @@ print(df)
 | Yes           | No            | 12            | No                |
 | No            | No            | 12            | No                |
 
+|                                       |                                       |
+| ------------------------------------- | ------------------------------------- |
+| ![Alt Text](Image/DecisionTree05.png) | ![Alt Text](Image/DecisionTree06.png) |
+#### Step1: Calculate Gini Impurity for Loves Popcorn
 Loves Popcorn(True) -> 1 Loves Cool As Ice(Ture) and 3 Loves Cool As Ice(False)<br>
 Loves Popcorn(False) -> 2 Loves Cool As Ice(Ture) and 1 Loves Cool As Ice(False)<br>
-
-Loves Soda(True) -> 3 Loves Cool As Ice(Ture) and 1 Loves Cool As Ice(False)<br>
-Loves Soda(False) -> 0 Loves Cool As Ice(Ture) and 3 Loves Cool As Ice(False)<br>
-
-Loves Soda does a better job predicting who will and will not Loves Cool As Ice<br>
-We want to quantify the differences between Loves Popcorn and Loves Soda<br>
 
 Gini Impurity for a Leaf = 1 - (1/4)^2 - (3/4)^2 = 0.375<br>
 Gini Impurity for a Leaf = 1 - (2/3)^2 - (1/3)^2 = 0.444<br>
 Total Impurity for Loves Popcorn = 0.375*(4/7) + 0.444*(3/7) = 0.405<br>
-Likewise Total Impurity for Loves Soda = 0.214<br>
 
-Calculate Gini Impurity for Age:<br>
-Step1: Calculate Gini Impurity for 9.5, 15, 26.5, 36.5, 44, 66.5<br>
+#### Step2: Calculate Gini Impurity for Loves Soda
+Loves Soda(True) -> 3 Loves Cool As Ice(Ture) and 1 Loves Cool As Ice(False)<br>
+Loves Soda(False) -> 0 Loves Cool As Ice(Ture) and 3 Loves Cool As Ice(False)<br>
+
+Likewise Total Impurity for Loves Soda = 0.214<br>
+Loves Soda does a better job predicting who will and will not Loves Cool As Ice<br>
+
+#### Step3: Calculate Gini Impurity for Age
+Calculate Gini Impurity for 9.5, 15, 26.5, 36.5, 44, 66.5<br>
 
 Age < 9.5(True) -> 0 Loves Cool As Ice(Ture) and 1 Loves Cool As Ice(False)<br>
 Age < 9.5(False) -> 3 Loves Cool As Ice(Ture) and 3 Loves Cool As Ice(False)<br>
 Gini Impurity for a Leaf = 1 - (0/1)^2 - (1/1)^2 = 0<br>
 Gini Impurity for a Leaf = 1 - (3/6)^2 - 3(/6)^2 = 0.5<br>
 Total Gini Impurity for Age 9.5 = 0*(1/7) + 0.5*(6/7) = 0.429<br>
+
 Likewise<br>
 Total Gini Impurity for Age 9.5 = 0.429<br>
 Total Gini Impurity for Age 15 = 0.343<br>
@@ -413,8 +420,13 @@ Total Gini Impurity for Age 26.5 = 0.476<br>
 Total Gini Impurity for Age 36.5 = 0.476<br>
 Total Gini Impurity for Age 44 = 0.343<br>
 Total Gini Impurity for Age 66.5 = 0.429<br>
-
 Two candidate thresholds 15 and 44 has lowest Impurity, so we can pick one, we pick 15 here<br>
+
+#### Step4: Compare Gini Impurity
+Gini Impurity for Loves Soda = 0.214<br>
+Gini Impurity for Age < 15 = 0.343<br>
+Gini Impurity for Loves Popcorn = 0.405<br>
+So we put Loves Soda at the top of the tree<br>
 |                                       |                                       |
 | ------------------------------------- | ------------------------------------- |
 | ![Alt Text](Image/DecisionTree02.png) | ![Alt Text](Image/DecisionTree03.png) |
