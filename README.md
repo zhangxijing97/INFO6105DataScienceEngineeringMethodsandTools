@@ -13,15 +13,17 @@
 - [Why Data Preprocessing](#Why-Data-Preprocessing)
 - [Multiple Imputation by Chained Equation(MICE)](#Multiple-Imputation-by-Chained-Equations)
 - [Binning](#Binning)
+- [Sample](#Sample)
 
 3. [Decision Trees](#3-Decision-Trees)
 - [Create a Decision Tree](#Create-a-Decision-Tree)
-- [Gain](#Gain)
 - [Gini](#Gini)
+- [Gain](#Gain)
 - [Classification Error](#Classification-Error)
 - [Entropy](#Entropy)
 - [Information Gain](#Information-Gain)
 - [Gain Ratio](#Gain-Ratio)
+- [Sample](#Sample)
 
 4. [Linear Classifiers](#4-Linear-Classifiers)
 
@@ -365,6 +367,9 @@ print(df)
 # [124 rows x 3 columns]
 ```
 
+### Sample
+test1
+
 ## 3. Decision Trees
 ![Alt Text](Image/DecisionTree01.png)
 - A decision tree is a hierarchical classification model that uses a tree structure and can be used to support decisions<br>
@@ -431,11 +436,6 @@ So we put Loves Soda at the top of the tree<br>
 | ------------------------------------- | ------------------------------------- |
 | ![Alt Text](Image/DecisionTree02.png) | ![Alt Text](Image/DecisionTree03.png) |
 
-### Gain
-Gain = P – M<br>
-P: Impurity before spilt<br>
-M: Impurity after spilt<br>
-
 ### Gini
 Gini = 1 − ∑i=1 n pi^2<br>
 ​pi: the proportion of items labeled with class i in the set<br>
@@ -455,7 +455,12 @@ Gini = 1-(6/12)^2-(6/12)^2 = 0.5<br>
 Gini(N1) = 1-(5/6)^2-(1/6)^2 = 0.278<br>
 Gini(N2) = 1-(2/6)^2-(4/6)^2 = 0.444<br>
 Gini(Children) = 6/12 * 0.278 + 6/12 * 0.444 = 0.361<br>
+Gain = 0.500 – 0.361 = 0.139<br>
 
+### Gain
+Gain = P – M<br>
+P: Impurity before spilt<br>
+M: Impurity after spilt<br>
 Gain = 0.500 – 0.361 = 0.139<br>
 
 ### Classification Error
@@ -521,7 +526,16 @@ ni: number of records in partition i<br>
 Information gain has the disadvantage that it prefers attributes with large number of values that split the data into small, pure subsets leads to overfitting to train dataset.<br>
 
 ### Gain Ratio
-Gain Ratio (Quinlan’s Gain Ratio) = 
+Gain Ratio(Quinlan’s Gain Ratio)
+– Adjusts Information Gain by the entropy of the partitioning (SplitINFO)<br>
+– arge number of small partitions is penalized<br>
+– Designed to overcome the disadvantage of Information Gain<br>
+– Used in C4.5 algorithm<br>
+
+### Sample
+test2
+
+
 
 ## 4. Linear Classifiers
 ## 5. Non-Linear Classifiers
