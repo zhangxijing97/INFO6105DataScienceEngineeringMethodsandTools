@@ -27,7 +27,9 @@
 
 4. [Clustering Methods](#4-Clustering-Methods)
 
-5. [Linear Classifiers](#5-Linear-Classifiers)
+5. [Linear Regression](#5-Linear-Regression)
+- [Code for Linear Regression](#Code-for-Linear-Regression)
+- [Code for KNN](#Code-for-KNN)
 
 6. [Non-Linear Classifiers](#5-Non-Linear-Classifiers)
 
@@ -610,7 +612,38 @@ dendrogram(linkage_data, truncate_mode = 'level' ,p=5)
 plt.show()
 ```
 
-## 5. Linear Classifiers
+## 5. Linear Regression
+### Code for Linear Regression
+```
+#Input Dateset
+org_df = pd.read_csv("/Users/zhangxijing/MasterNEU/INFO6105DataScienceEngineeringMethodsandTools/Dataset/hw4_train.csv")
+test_df = pd.read_csv("/Users/zhangxijing/MasterNEU/INFO6105DataScienceEngineeringMethodsandTools/Dataset/hw4_test.csv")
+
+#Define features and outcome for Regression
+outcome_df =  org_df.loc[:,org_df.columns == 'BloodPressure']
+feat_df =  org_df.loc[:,org_df.columns.isin(['Pregnancies','Glucose','SkinThickness','Insulin','BMI','DiabetesPedigreeFunction','Age','Outcome'])]
+
+#Seperate test and train data
+train_x,test_x,train_y,test_y = train_test_split(feat_df,outcome_df,test_size=0.25)
+
+#Create a multiple Reg model
+model = LinearRegression()
+model.fit(train_x,  train_y)
+
+test_pred_y = model.predict(test_x)
+
+r_sq = model.score(test_x, test_y)
+print ('R2 =',r_sq ) # statistical measure of how well the regression predictions approximate the real data points
+
+# Predict 'BloodPressure' in hw4_test.csv
+regression_features = test_df.columns.drop(['BloodPressure'])
+X_test_reg = test_df[regression_features]
+test_df['BloodPressure'] = model.predict(X_test_reg)
+test_pred_y = model.predict(test_x)
+print(test_df)
+```
+### Code for KNN
+
 ## 6. Non-Linear Classifiers
 ## 7. Ensembles and Super learners
 ## 8. Dimensionality Reduction
