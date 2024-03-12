@@ -13,7 +13,6 @@
 - [Why Data Preprocessing](#Why-Data-Preprocessing)
 - [Multiple Imputation by Chained Equation(MICE)](#Multiple-Imputation-by-Chained-Equations)
 - [Binning](#Binning)
-- [Sample](#Sample)
 
 3. [Decision Trees](#3-Decision-Trees)
 - [Create a Decision Tree](#Create-a-Decision-Tree)
@@ -23,7 +22,7 @@
 - [Entropy](#Entropy)
 - [Information Gain](#Information-Gain)
 - [Gain Ratio](#Gain-Ratio)
-- [Sample](#Sample)
+- [Code for Decision Trees](#Code-for-Decision-Trees)
 
 4. [Linear Classifiers](#4-Linear-Classifiers)
 
@@ -367,9 +366,6 @@ print(df)
 # [124 rows x 3 columns]
 ```
 
-### Sample
-test1
-
 ## 3. Decision Trees
 ![Alt Text](Image/DecisionTree01.png)
 - A decision tree is a hierarchical classification model that uses a tree structure and can be used to support decisions<br>
@@ -532,10 +528,19 @@ Gain Ratio(Quinlan’s Gain Ratio)
 – Designed to overcome the disadvantage of Information Gain<br>
 – Used in C4.5 algorithm<br>
 
-### Sample
-test2
+### Code for Decision Trees
+#### Stop Growth (Pre-pruning) techniques
+Hyperparameters can be used as a constraint in decision trees:
+– max_depth: maximum depth of decision tree.<br>
+– min_sample_split: The minimum number of samples required to split an internal node.<br>
+– min_samples_leaf: The minimum number of samples required to be at a leaf node.<br>
+– min_impurity_decrease: The minimum decrease in impurity  by splitting.<br>
+![Alt Text](Image/DecisionTree07.png)
 
-
+#### Post pruning techniques
+– the technique adds complexity penalty to impurity.<br>
+– It is parameterized by the cost complexity parameter, ccp_alpha.<br>
+– Greater values of ccp_alpha increase the number of nodes pruned. When ccp_alpha is set to zero, the tree overfits.<br>
 
 ## 4. Linear Classifiers
 ## 5. Non-Linear Classifiers
