@@ -584,6 +584,32 @@ Specificity = True Negative/(True Negative + False Positive)<br>
 - K-means clustering specifically tries to put the data into the number of clusters.<br>
 - Hierarchical clustering tells you, pairwise, what two things are most similar.<br>
 
+```
+# Input Dateset
+org_df = pd.read_csv("/Users/zhangxijing/MasterNEU/INFO6105DataScienceEngineeringMethodsandTools/Dataset/market_ds.csv")
+train_feat = prepare_data(org_df)
+
+# Get KMeans
+inertias = []
+for i in range(1, 11):  # Test 1 to 10 clusters
+    kmeans = KMeans(n_clusters=i)
+    kmeans.fit(train_feat)
+    inertias.append(kmeans.inertia_)
+
+# Kmeans
+model = KMeans(n_clusters=2)
+model.fit(train_feat)
+
+# Filter rows based on cluster
+first_cluster = train_feat.loc[model.labels_ == 0,:]
+second_cluster = train_feat.loc[model.labels_ == 1,:]
+
+# Agnes(Agglomerative Nesting)
+linkage_data = linkage(train_feat, method='single', metric='euclidean')
+dendrogram(linkage_data, truncate_mode = 'level' ,p=5)
+plt.show()
+```
+
 ## 5. Linear Classifiers
 ## 6. Non-Linear Classifiers
 ## 7. Ensembles and Super learners

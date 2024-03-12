@@ -66,11 +66,7 @@ plt.scatter(first_cluster.loc[:, 'Patient_Age'], first_cluster.loc[:, 'MIC'], co
 plt.scatter(second_cluster.loc[:, 'Patient_Age'], second_cluster.loc[:, 'MIC'], color='black')
 plt.show()
 
-#kmedoids
-# model = KMedoids(n_clusters=2)
-# model.fit(train_feat)
-# print(kmedoids.labels_)
-#
+# KMean
 inertias = []
 for i in range(1,11):
     kmeans = KMeans(n_clusters=i)
