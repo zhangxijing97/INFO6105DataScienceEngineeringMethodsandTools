@@ -578,6 +578,7 @@ treemodel.fit(train_feat, train_label)
 Accuracy = (True Positive + True Negative)/(True Positive + True Negative + False Positive + False Negative)<br>
 Sensitivity = True Positive/(True Positive + False Negative)<br>
 Specificity = True Negative/(True Negative + False Positive)<br>
+![Alt Text](Image/DecisionTree08.png)
 
 ## 4. Linear Classifiers
 ## 5. Non-Linear Classifiers
