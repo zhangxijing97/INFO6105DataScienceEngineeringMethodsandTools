@@ -25,15 +25,15 @@
 - [Code for Decision Trees](#Code-for-Decision-Trees)
 - [Confusion Matrix](#Confusion-Matrix)
 
-4. [Linear Classifiers](#4-Linear-Classifiers)
+4. [Clustering Methods](#4-Clustering-Methods)
 
-5. [Non-Linear Classifiers](#5-Non-Linear-Classifiers)
+5. [Linear Classifiers](#5-Linear-Classifiers)
 
-6. [Ensembles and Super learners](#6-Ensembles-and-Super-learners)
+6. [Non-Linear Classifiers](#5-Non-Linear-Classifiers)
 
-7. [Dimensionality Reduction](#7-Dimensionality-Reduction)
+7. [Ensembles and Super learners](#6-Ensembles-and-Super-learners)
 
-8. [Clustering Methods](#8-Clustering-Methods)
+8. [Dimensionality Reduction](#7-Dimensionality-Reduction)
 
 9. [ Association Rules](#9-Association-Rules)
 
