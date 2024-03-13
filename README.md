@@ -35,6 +35,8 @@
 - [Association rule](#Association-rule)
 - [Code for Association rule](#Code-for-Association-rule)
 
+7. [Ensembles and Supervised learners](#7-Ensembles-and-Supervised-learners)
+
 7. [Non-Linear Classifiers](#5-Non-Linear-Classifiers)
 
 8. [Ensembles and Super learners](#6-Ensembles-and-Super-learners)
@@ -758,8 +760,11 @@ ax.set_zlabel('lift')
 plt.show()
 ```
 
+## 7. Ensembles and Supervised learners
+### Random Forests
+
+
 ## 7. Non-Linear Classifiers
-## 8. Ensembles and Super learners
 ## 9. Dimensionality Reduction
 ## 10. Introduction to Neural Networks and Deep Learning
 ## 11. Introduction to Big-data Analysis
