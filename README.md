@@ -31,13 +31,13 @@
 - [Code for Linear Regression](#Code-for-Linear-Regression)
 - [Code for KNN](#Code-for-KNN)
 
-6. [Non-Linear Classifiers](#5-Non-Linear-Classifiers)
+6. [Association Rules](#6-Association-Rules)
 
-7. [Ensembles and Super learners](#6-Ensembles-and-Super-learners)
+7. [Non-Linear Classifiers](#5-Non-Linear-Classifiers)
 
-8. [Dimensionality Reduction](#7-Dimensionality-Reduction)
+8. [Ensembles and Super learners](#6-Ensembles-and-Super-learners)
 
-9. [ Association Rules](#9-Association-Rules)
+9. [Dimensionality Reduction](#7-Dimensionality-Reduction)
 
 10. [Introduction to Neural Networks / Deep Learning](#10-Introduction-to-Neural-Networks-and-Deep-Learning)
 
@@ -688,10 +688,12 @@ print(f"Best k based on highest accuracy: {best_k_acc}")
 print(f"Accuracy: {max(accuracies)}, Sensitivity: {sensitivities[accuracies.index(max(accuracies))]}, Specificity: {specificities[accuracies.index(max(accuracies))]}")
 ```
 
-## 6. Non-Linear Classifiers
-## 7. Ensembles and Super learners
-## 8. Dimensionality Reduction
-## 9. Association Rules
+## 6. Association Rules
+
+
+## 7. Non-Linear Classifiers
+## 8. Ensembles and Super learners
+## 9. Dimensionality Reduction
 ## 10. Introduction to Neural Networks and Deep Learning
 ## 11. Introduction to Big-data Analysis
 
