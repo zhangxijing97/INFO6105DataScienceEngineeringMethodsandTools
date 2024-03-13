@@ -643,6 +643,50 @@ test_pred_y = model.predict(test_x)
 print(test_df)
 ```
 ### Code for KNN
+K Nearest Neighbor
+```
+# Load dataset
+org_df = pd.read_csv("/Users/zhangxijing/MasterNEU/INFO6105DataScienceEngineeringMethodsandTools/Dataset/hw4_train.csv")
+
+label_df =  org_df.loc[:,org_df.columns == 'Outcome']
+feat_df =  org_df.loc[:,org_df.columns != 'Outcome']
+
+# regression_features = test_df.columns.drop(['BloodPressure'])
+
+# Separate test and train data
+train_x, test_x, train_y, test_y = train_test_split(feat_df, label_df, test_size=0.25, random_state=42)
+
+# Initialize lists to store the metrics
+accuracies = []
+sensitivities = []
+specificities = []
+k_values = range(1, 20)
+
+# Train 19 KNN models with k from 1 to 19
+for k in k_values:
+    knn = KNeighborsClassifier(n_neighbors=k)
+    knn.fit(train_x, train_y)
+    test_pred_y = knn.predict(test_x)
+
+    # Calculate confusion matrix and extract TP, TN, FP, FN
+    cf = confusion_matrix(test_y, test_pred_y)
+    TN, FP, FN, TP = cf.ravel()
+
+    # Calculate accuracy, sensitivity (recall), and specificity
+    accuracy = accuracy_score(test_y, test_pred_y)
+    sensitivity = recall_score(test_y, test_pred_y)
+    specificity = TN / (TN + FP)
+
+    # Append metrics to their respective lists
+    accuracies.append(accuracy)
+    sensitivities.append(sensitivity)
+    specificities.append(specificity)
+
+# Identify the best k based on highest accuracy (or other criteria)
+best_k_acc = k_values[accuracies.index(max(accuracies))]
+print(f"Best k based on highest accuracy: {best_k_acc}")
+print(f"Accuracy: {max(accuracies)}, Sensitivity: {sensitivities[accuracies.index(max(accuracies))]}, Specificity: {specificities[accuracies.index(max(accuracies))]}")
+```
 
 ## 6. Non-Linear Classifiers
 ## 7. Ensembles and Super learners
