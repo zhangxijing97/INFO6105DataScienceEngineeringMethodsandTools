@@ -32,6 +32,7 @@
 - [Code for KNN](#Code-for-KNN)
 
 6. [Association Rules](#6-Association-Rules)
+- [Association rule](#Association-rule)
 
 7. [Non-Linear Classifiers](#5-Non-Linear-Classifiers)
 
@@ -689,7 +690,43 @@ print(f"Accuracy: {max(accuracies)}, Sensitivity: {sensitivities[accuracies.inde
 ```
 
 ## 6. Association Rules
+**Association rule:** Association rule mining is a rule- based machine learning method for discovering interesting relations between variables in transactional databases.<br>
+Example: basket analysis, where the goal is to uncover associations between items frequently purchased together.<br>
 
+Rule: X => Y<br>
+X: antecedent (or left-hand side) items that when observed<br>
+Y: consequent (or right-hand side) items that are expected or likely to be present when the conditions in the antecedent are mets<br>
+
+A, B => C: it suggests that when both items A and B are present (antecedent), there is a likelihood that item C will also be present (consequent).<br>
+{Milk, Bread} => {Eggs}: customers who buy both milk and bread are likely to buy eggs as well.<br>
+
+**Support:** Support measures the frequency of occurrence of a particular combination of items in a dataset. High support values indicate that the itemset is common in the dataset.<br>
+
+Support = frq(X,Y)/N<br>
+frq(X, Y): This is the count of transactions where the itemset (X, Y) is present.<br>
+N: This represents the total number of transactions or instances in the dataset.<br>
+Support({Milk,Bread})= Number of transactions containing both Milk and Bread/Total number of transactions in the dataset<br>
+
+**Confidence:** Confidence measures the likelihood that an associated rule holds true. It is the conditional probability of finding the consequent (item B) given the antecedent (item A). High confidence indicates a strong association between the antecedent and consequent.<br>
+
+Confidence = frq(X,Y)/frq(X)<br>
+frq(X, Y): This is the count of transactions where both the antecedent (X) and the consequent (Y) are present.<br>
+frq(X): This is the count of transactions where the antecedent (X) is present.<br>
+Confidence({Milk, Bread}⇒{Eggs}) = Number of transactions containing Milk, Bread, and Eggs/Number of transactions containing Milk and Bread<br>
+
+**Lift:** Lift measures the strength of association between an antecedent and consequent, taking into account the support of both itemsets. A lift greater than 1 indicates that the presence of the antecedent increases the likelihood of the consequent.<br>
+
+Lift = Support(X,Y)/[Support(X)*Support(Y)]<br>
+Support(X, Y): This is the support of the itemset containing both X and Y<br>
+Support(X): This is the support of the antecedent X<br>
+Support(Y): This is the support of the consequent Y<br>
+
+The lift formula essentially compares the observed co-occurrence of X and Y (Support(X, Y)) to what would be expected if X and Y were independent events (Support(X) * Support(Y))<br>
+Lift = 1: X and Y are independent.<br>
+Lift > 1: There is a positive association between X and Y (X and Y are more likely to occur together than expected).<br>
+Lift < 1: There is a negative association between X and Y (X and Y are less likely to occur together than expected).<br>
+
+Lift({Milk, Bread}⇒{Eggs})= Support({Milk, Bread, Eggs})/Support({Milk, Bread})×Support({Eggs})<br>
 
 ## 7. Non-Linear Classifiers
 ## 8. Ensembles and Super learners
