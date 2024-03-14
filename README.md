@@ -32,7 +32,6 @@
 - [Code for KNN](#Code-for-KNN)
 
 6. [Association Rules](#6-Association-Rules)
-- [Association rule](#Association-rule)
 - [Code for Association rule](#Code-for-Association-rule)
 
 7. [Ensembles and Supervised learners](#7-Ensembles-and-Supervised-learners)
