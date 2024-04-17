@@ -43,6 +43,8 @@
 9. [Dimensionality Reduction](#7-Dimensionality-Reduction)
 
 10. [Introduction to Neural Networks / Deep Learning](#10-Introduction-to-Neural-Networks-and-Deep-Learning)
+- [Create a Decision Tree](#Create-a-Decision-Tree)
+- [Gini](#Gini)
 
 11. [Introduction to Big-data Analysis](#11-Introduction-to-Big-data-Analysis)
 
@@ -766,8 +768,6 @@ plt.show()
 ## 7. Non-Linear Classifiers
 ## 9. Dimensionality Reduction
 ## 10. Introduction to Neural Networks and Deep Learning
-## 11. Introduction to Big-data Analysis
 
-<!-- | Text with Color | Another Text |
-| --------------- | ------------ |
-| <span style="color:red;">Red Text</span> | <span style="color:blue;">Blue Text</span> | -->
+
+## 11. Introduction to Big-data Analysis
