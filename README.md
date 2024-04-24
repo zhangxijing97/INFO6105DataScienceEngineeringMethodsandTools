@@ -158,6 +158,10 @@ cji: centroid of the cluster to which xi is assigned<br>
 
 ### Multiple Imputation by Chained Equations
 
+**Chained:**<br> Implies a sequential process where each variable with missing data is imputed one at a time, iterating through each variable in a cycle.
+
+**Equations:**<br> For each variable being imputed, a separate imputation model is fit. The type of model depends on the nature of the variable (e.g., logistic regression for binary variables, linear regression for continuous variables, etc.).
+
 **Univariate Imputation**<br>
 In univariate imputation, each missing value in a dataset is imputed (filled in) based on information from the same variable.<br>
 
