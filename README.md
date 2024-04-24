@@ -35,6 +35,9 @@
 - [Code for Association rules](#Code-for-Association-rules)
 
 7. [Ensembles and Supervised learners](#7-Ensembles-and-Supervised-learners)
+- [Random Forest](#Random-Forest)
+- [Adaboost](#Adaboost)
+- [Code for Random Forests and Adaboost](#Code-for-Random-Forests-and-Adaboost)
 
 7. [Non-Linear Classifiers](#5-Non-Linear-Classifiers)
 
@@ -158,9 +161,9 @@ cji: centroid of the cluster to which xi is assigned<br>
 
 ### Multiple Imputation by Chained Equations
 
-**Chained:**<br> Implies a sequential process where each variable with missing data is imputed one at a time, iterating through each variable in a cycle.
+**Chained:** Implies a sequential process where each variable with missing data is imputed one at a time, iterating through each variable in a cycle.<br>
 
-**Equations:**<br> For each variable being imputed, a separate imputation model is fit. The type of model depends on the nature of the variable (e.g., logistic regression for binary variables, linear regression for continuous variables, etc.).
+**Equations:** For each variable being imputed, a separate imputation model is fit. The type of model depends on the nature of the variable (e.g., logistic regression for binary variables, linear regression for continuous variables, etc.).<br>
 
 **Univariate Imputation**<br>
 In univariate imputation, each missing value in a dataset is imputed (filled in) based on information from the same variable.<br>
@@ -736,7 +739,7 @@ Lift < 1: There is a negative association between X and Y (X and Y are less like
 
 Lift({Milk, Bread}⇒{Eggs})= Support({Milk, Bread, Eggs})/Support({Milk, Bread})×Support({Eggs})<br>
 
-## Code for Association Rules
+### Code for Association Rules
 ```
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -768,6 +771,44 @@ plt.show()
 ## 7. Ensembles and Supervised learners
 ### Random Forests
 
+
+### Adaboost
+
+### Code for Random Forests and Adaboost
+```
+import pandas as pd
+from sklearn.model_selection import train_test_split, KFold, cross_val_score
+from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
+from sklearn.metrics import accuracy_score
+
+# Load Dataset
+org_df = pd.read_csv("/Users/zhangxijing/MasterNEU/INFO6105DataScienceEngineeringMethodsandTools/Dataset/diabetes.csv")
+
+# Define features and label
+label_df = org_df['Outcome']
+feat_df = org_df.drop('Outcome', axis=1)
+
+# Initialize models with different estimators
+rf_3 = RandomForestClassifier(n_estimators=3)
+rf_50 = RandomForestClassifier(n_estimators=50)
+ad_3 = AdaBoostClassifier(n_estimators=3)
+ad_50 = AdaBoostClassifier(n_estimators=50)
+
+# Setup K-Fold
+k_folds = KFold(n_splits=5)
+
+# Calculate cross-validation scores
+scores_rf_3 = cross_val_score(rf_3, feat_df, label_df, cv=k_folds)
+scores_rf_50 = cross_val_score(rf_50, feat_df, label_df, cv=k_folds)
+scores_ad_3 = cross_val_score(ad_3, feat_df, label_df, cv=k_folds)
+scores_ad_50 = cross_val_score(ad_50, feat_df, label_df, cv=k_folds)
+
+# Print scores and their means
+print(f"RF 3 Scores: {scores_rf_3}, Mean: {scores_rf_3.mean()}")
+print(f"RF 50 Scores: {scores_rf_50}, Mean: {scores_rf_50.mean()}")
+print(f"Adaboost 3 Scores: {scores_ad_3}, Mean: {scores_ad_3.mean()}")
+print(f"Adaboost 50 Scores: {scores_ad_50}, Mean: {scores_ad_50.mean()}")
+```
 
 ## 7. Non-Linear Classifiers
 ## 9. Dimensionality Reduction
