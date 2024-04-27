@@ -811,7 +811,9 @@ print(f"Adaboost 50 Scores: {scores_ad_50}, Mean: {scores_ad_50.mean()}")
 ```
 
 ## 7. Non-Linear Classifiers
+
 ## 9. Dimensionality Reduction
+
 ## 10. Introduction to Neural Networks and Deep Learning
 
 
