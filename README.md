@@ -815,6 +815,41 @@ print(f"Adaboost 50 Scores: {scores_ad_50}, Mean: {scores_ad_50.mean()}")
 ## 9. Dimensionality Reduction
 
 ## 10. Introduction to Neural Networks and Deep Learning
+### Image Classification
+- **Objective**: Classify handwritten characters (e.g., distinguishing 'X' from 'Y') using pixel data.
+- **Input Representation**: Each grayscale pixel is represented by a value between 0 (black) and 255 (white).
+
+### Limitations of Fully Connected Layers
+- **Complexity**: Large number of weights make training difficult, prone to overfitting, and resource-intensive.
+- **Pattern Detection**: Fully connected layers are inefficient for detecting smaller patterns within images.
+
+### Convolutional Layers
+- **Function**: Use filters (kernels) to detect specific patterns in different parts of the image.
+- **Efficiency**: Reduce the number of parameters compared to fully connected layers, making training less computationally expensive.
+- **Activation Function**: ReLU is preferred to introduce non-linearity and deactivate non-pattern nodes.
+
+### Convolutional Neural Networks (CNNs)
+- **Structure**: Consist of multiple convolutional layers for feature extraction followed by fully connected layers for classification.
+- **Feature Extraction**: Each layer extracts different features, from low-level (edges) to high-level (object parts).
+- **Pooling**: Reduces dimensionality and computation, adds translation invariance.
+
+### Training CNNs
+- **Backward Propagation**: Optimizes weights by minimizing classification error using gradient descent.
+- **Flattening**: Converts the final convolutional layer into a 1-dimensional array for input into a fully connected network.
+
+### Practical Examples
+- **Pattern Detection**: Demonstrated with examples of filters identifying specific patterns in images.
+- **Pooling Types**: Max pooling and average pooling explained, with max pooling being the most common.
+
+### Key Concepts
+- **Filters (Kernels)**: Extract features from input images.
+- **Activation Functions**: Introduce non-linearity into the model.
+- **Pooling Layers**: Reduce the spatial dimensions of the feature maps.
+- **Training Techniques**: Use of gradient descent and backpropagation to optimize model performance.
+
+### Conclusion
+CNNs provide a scalable and efficient approach to image classification by leveraging convolutional layers for feature extraction and fully connected layers for classification. Proper training techniques ensure that the network learns to accurately classify images based on high-level features.
+
 
 
 ## 11. Introduction to Big-data Analysis
