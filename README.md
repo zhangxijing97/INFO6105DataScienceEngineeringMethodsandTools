@@ -850,6 +850,4 @@ print(f"Adaboost 50 Scores: {scores_ad_50}, Mean: {scores_ad_50.mean()}")
 ### Conclusion
 CNNs provide a scalable and efficient approach to image classification by leveraging convolutional layers for feature extraction and fully connected layers for classification. Proper training techniques ensure that the network learns to accurately classify images based on high-level features.
 
-
-
 ## 11. Introduction to Big-data Analysis
