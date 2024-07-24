@@ -33,3 +33,5 @@ print(nn.summary())
 loss,accuracy = nn.evaluate(x_test,y_test)
 print('accuracy=',accuracy,' , loss=',loss)
 
+
+#%%
