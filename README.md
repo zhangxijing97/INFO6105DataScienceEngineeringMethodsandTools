@@ -867,23 +867,29 @@ from sklearn.model_selection import train_test_split
 from keras.models import Sequential
 from keras.layers import Dense, Input
 ```
-- 'pandas': For data manipulation and analysis.<br>
-- 'train_test_split' from sklearn: For splitting the dataset into training and testing sets.<br>
-- 'Sequential', 'Dense', 'Input' from 'keras.models' and 'keras.layers': For building and training the neural network.<br>
+- 'pandas': For data manipulation and analysis.
+'pandas' is a powerful library for data manipulation and analysis. It provides data structures like DataFrame and Series, which are essential for handling structured data efficiently.
+- 'train_test_split' from sklearn: For splitting the dataset into training and testing sets.
+'scikit-learn' can splits arrays or matrices into random train and test subsets.
+- 'Keras' is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, Theano, or CNTK.
+- 'Sequential' from 'keras.models'.
+The 'Sequential' class is a linear stack of layers.
+
+- 'Dense', 'Input' from 'keras.layers'.
 
 ```
 # Labels and Features
 label_df = org_df.loc[:, org_df.columns == 'Outcome']
 feat_df = org_df.loc[:, org_df.columns != 'Outcome']
 ```
-- 'label_df' contains the target variable (Outcome).<br>
-- 'feat_df' contains all the feature variables (all columns except Outcome).<br>
+- 'label_df' contains the target variable (Outcome).
+- 'feat_df' contains all the feature variables (all columns except Outcome).
 
 ```
 # Split Train and Test Data
 x_train, x_test, y_train, y_test = train_test_split(feat_df, label_df, test_size=0.3)
 ```
-- Splits the dataset into training (70%) and testing (30%) sets.<br>
+- Splits the dataset into training (70%) and testing (30%) sets.
 
 #### Creating the Neural Network Model
 ```
