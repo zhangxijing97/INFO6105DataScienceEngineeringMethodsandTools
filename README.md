@@ -867,15 +867,15 @@ from sklearn.model_selection import train_test_split
 from keras.models import Sequential
 from keras.layers import Dense, Input
 ```
-- 'pandas': For data manipulation and analysis.
-'pandas' is a powerful library for data manipulation and analysis. It provides data structures like DataFrame and Series, which are essential for handling structured data efficiently.
-- 'train_test_split' from sklearn: For splitting the dataset into training and testing sets.
-'scikit-learn' can splits arrays or matrices into random train and test subsets.
-- 'Keras' is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, Theano, or CNTK.
-- 'Sequential' from 'keras.models'.
-The 'Sequential' class is a linear stack of layers.
+- 'pandas': For data manipulation and analysis.<br>
+'pandas' is a powerful library for data manipulation and analysis. It provides data structures like DataFrame and Series, which are essential for handling structured data efficiently.<br>
+- 'train_test_split' from sklearn: For splitting the dataset into training and testing sets.<br>
+'scikit-learn' can splits arrays or matrices into random train and test subsets.<br>
+- 'Keras' is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, Theano, or CNTK.<br>
+- 'Sequential' from 'keras.models'.<br>
+The 'Sequential' class is a linear stack of layers.<br>
 
-- 'Dense', 'Input' from 'keras.layers'.
+- 'Dense', 'Input' from 'keras.layers'.<br>
 
 ```
 # Labels and Features
