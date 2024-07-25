@@ -860,6 +860,7 @@ loss,accuracy = nn.evaluate(x_test,y_test)
 print('accuracy=',accuracy,' , loss=',loss)
 ```
 
+#### Importing Libraries
 ```
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -884,6 +885,7 @@ x_train, x_test, y_train, y_test = train_test_split(feat_df, label_df, test_size
 ```
 - Splits the dataset into training (70%) and testing (30%) sets.<br>
 
+#### Creating the Neural Network Model
 ```
 # Create NN Model
 nn = Sequential()
@@ -896,12 +898,14 @@ nn.add(Dense(units=1, activation='sigmoid'))
 - Adds a hidden layer with 5 neurons and ReLU activation.
 - Adds an output layer with 1 neuron and sigmoid activation (suitable for binary classification).
 
+#### Compiling the Model
 ```
 # Set Optimizer, Loss Function, and metric
 nn.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 ```
 - Compiles the model with the Adam optimizer, binary cross-entropy loss function (appropriate for binary classification), and accuracy as the evaluation metric.<br>
 
+#### Training the Model
 ```
 # Train NN Model
 nn.fit(x_train, y_train, epochs=100)
