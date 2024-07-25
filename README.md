@@ -745,7 +745,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from mlxtend.frequent_patterns import fpgrowth,apriori,association_rules
 
-
 #Input Dateset
 org_df = pd.read_csv("amr_horse_ds.csv")
 org_df= pd.get_dummies(org_df.loc[:,org_df.columns!='Age'])
@@ -823,6 +822,7 @@ print(f"Adaboost 50 Scores: {scores_ad_50}, Mean: {scores_ad_50.mean()}")
 - **Complexity**: Large number of weights make training difficult, prone to overfitting, and resource-intensive.
 - **Pattern Detection**: Fully connected layers are inefficient for detecting smaller patterns within images.
 
+### Neural Networks Sample
 ```
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -859,6 +859,62 @@ print(nn.summary())
 loss,accuracy = nn.evaluate(x_test,y_test)
 print('accuracy=',accuracy,' , loss=',loss)
 ```
+
+```
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from keras.models import Sequential
+from keras.layers import Dense, Input
+```
+- 'pandas': For data manipulation and analysis.<br>
+- 'train_test_split' from sklearn: For splitting the dataset into training and testing sets.<br>
+- 'Sequential', 'Dense', 'Input' from 'keras.models' and 'keras.layers': For building and training the neural network.<br>
+
+```
+# Labels and Features
+label_df = org_df.loc[:, org_df.columns == 'Outcome']
+feat_df = org_df.loc[:, org_df.columns != 'Outcome']
+```
+- 'label_df' contains the target variable (Outcome).<br>
+- 'feat_df' contains all the feature variables (all columns except Outcome).<br>
+
+```
+# Split Train and Test Data
+x_train, x_test, y_train, y_test = train_test_split(feat_df, label_df, test_size=0.3)
+```
+- Splits the dataset into training (70%) and testing (30%) sets.<br>
+
+```
+# Create NN Model
+nn = Sequential()
+nn.add(Input(shape=(8,)))
+nn.add(Dense(units=5, activation='relu'))
+nn.add(Dense(units=1, activation='sigmoid'))
+```
+- Defines a sequential neural network model.
+- Adds an input layer with 8 input features (the number of features in the dataset).
+- Adds a hidden layer with 5 neurons and ReLU activation.
+- Adds an output layer with 1 neuron and sigmoid activation (suitable for binary classification).
+
+```
+# Set Optimizer, Loss Function, and metric
+nn.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+```
+- Compiles the model with the Adam optimizer, binary cross-entropy loss function (appropriate for binary classification), and accuracy as the evaluation metric.<br>
+
+```
+# Train NN Model
+nn.fit(x_train, y_train, epochs=100)
+print(nn.summary())
+```
+- Trains the model on the training data for 100 epochs.
+
+```
+# Accuracy of Model on Test data
+loss, accuracy = nn.evaluate(x_test, y_test)
+print('accuracy=', accuracy, ' , loss=', loss)
+```
+- Evaluates the model's performance on the test data.
 
 ### Convolutional Layers
 - **Function**: Use filters (kernels) to detect specific patterns in different parts of the image.
