@@ -867,21 +867,12 @@ from sklearn.model_selection import train_test_split
 from keras.models import Sequential
 from keras.layers import Dense, Input
 ```
-- 'pandas': For data manipulation and analysis.<br>
-
-'pandas' is a powerful library for data manipulation and analysis. It provides data structures like DataFrame and Series, which are essential for handling structured data efficiently.<br>
+- 'pandas' is a powerful library for data manipulation and analysis. It provides data structures like DataFrame and Series, which are essential for handling structured data efficiently.<br>
 - 'train_test_split' from sklearn: For splitting the dataset into training and testing sets.<br>
-
-'scikit-learn' can splits arrays or matrices into random train and test subsets.<br>
 - 'Keras' is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, Theano, or CNTK.<br>
-- 'Sequential' from 'keras.models'.<br>
-
-The 'Sequential' class is a linear stack of layers. The concept of a "linear stack of layers" refers to the architecture of a neural network where layers are added one after another in a single, sequential order.<br>
-
-- 'Dense', 'Input' from 'keras.layers'.<br>
-
-The 'Dense' layer is a fully connected layer, meaning every neuron in the layer is connected to every neuron in the previous layer.<br>
-The 'Input' layer is used to define the shape of the input data. This layer is usually the first layer in a model, specifying the expected shape of the input tensor(the feature is 8 in this case).<br>
+- The 'Sequential' class is a linear stack of layers. The concept of a "linear stack of layers" refers to the architecture of a neural network where layers are added one after another in a single, sequential order.<br>
+- The 'Dense' layer is a fully connected layer, meaning every neuron in the layer is connected to every neuron in the previous layer.<br>
+- The 'Input' layer is used to define the shape of the input data. This layer is usually the first layer in a model, specifying the expected shape of the input tensor(the feature is 8 in this case).<br>
 
 ```
 # Labels and Features
