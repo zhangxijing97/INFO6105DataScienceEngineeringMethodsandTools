@@ -899,7 +899,10 @@ nn.add(Dense(units=1, activation='sigmoid'))
 - Defines a sequential neural network model.
 - Adds an input layer with 8 input features (the number of features in the dataset).
 - Adds a hidden layer with 5 neurons and ReLU activation.
+- ReLU(x)=max(0,x)
 - Adds an output layer with 1 neuron and sigmoid activation (suitable for binary classification).
+- Sigmoid(x)= 1/(1+e^-x)
+![Alt Text](Image/activation_functions.png)
 
 #### Compiling the Model
 ```
