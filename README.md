@@ -877,8 +877,12 @@ from keras.layers import Dense, Input
 - 'Sequential' from 'keras.models'.<br>
 
 The 'Sequential' class is a linear stack of layers.<br>
+linear stack of layers: The concept of a "linear stack of layers" refers to the architecture of a neural network where layers are added one after another in a single, sequential order.<br>
 
 - 'Dense', 'Input' from 'keras.layers'.<br>
+
+The 'Dense' layer is a fully connected layer, meaning every neuron in the layer is connected to every neuron in the previous layer.<br>
+The 'Input' layer is used to define the shape of the input data. This layer is usually the first layer in a model, specifying the expected shape of the input tensor(the feature is 8 in this case).<br>
 
 ```
 # Labels and Features
