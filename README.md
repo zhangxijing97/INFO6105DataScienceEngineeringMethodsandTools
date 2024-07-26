@@ -876,8 +876,7 @@ from keras.layers import Dense, Input
 - 'Keras' is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, Theano, or CNTK.<br>
 - 'Sequential' from 'keras.models'.<br>
 
-The 'Sequential' class is a linear stack of layers.<br>
-linear stack of layers: The concept of a "linear stack of layers" refers to the architecture of a neural network where layers are added one after another in a single, sequential order.<br>
+The 'Sequential' class is a linear stack of layers. The concept of a "linear stack of layers" refers to the architecture of a neural network where layers are added one after another in a single, sequential order.<br>
 
 - 'Dense', 'Input' from 'keras.layers'.<br>
 
